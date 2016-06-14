@@ -193,7 +193,13 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/pushbutton.h \
     src/qt/sysbutton.h \
     src/qt/toolbutton.h \
-    src/qt/stackedwidget.h
+    src/qt/stackedwidget.h \
+    src/qt/ybsidebarwidget.h \
+    src/qt/ybtoolbutton.h \
+    src/qt/ybtoolbarwidget.h \
+    src/qt/ybseparater.h \
+    src/qt/ybstackedwidget.h \
+    src/qt/yboverviewpage.h
 
 SOURCES += src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
@@ -260,7 +266,13 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/pushbutton.cpp \
     src/qt/sysbutton.cpp \
     src/qt/toolbutton.cpp \
-    src/qt/stackedwidget.cpp
+    src/qt/stackedwidget.cpp \
+    src/qt/ybsidebarwidget.cpp \
+    src/qt/ybtoolbutton.cpp \
+    src/qt/ybtoolbarwidget.cpp \
+    src/qt/ybseparater.cpp \
+    src/qt/ybstackedwidget.cpp \
+    src/qt/yboverviewpage.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
