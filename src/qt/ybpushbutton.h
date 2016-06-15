@@ -7,12 +7,8 @@ class YbPushButton : public QPushButton
 {
     Q_OBJECT
 public:
-    explicit YbPushButton(QObject *parent = 0);
-
-signals:
-
-public slots:
-
+    explicit YbPushButton(QPixmap pixmap, QString text, QWidget *parent = 0);
+    explicit YbPushButton(QString text, QWidget *parent = 0);
 };
 
 #endif // YBPUSHBUTTON_H

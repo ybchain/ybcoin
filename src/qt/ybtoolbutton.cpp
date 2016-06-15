@@ -16,7 +16,7 @@ YbToolButton::YbToolButton(QPixmap pixmap, QPixmap checkedPixmap, QString text,Q
     setDefaultState();
     setAutoFillBackground(true);
     setFixedHeight(40);
-    setFixedWidth(180);
+    setFixedWidth(250);
     QHBoxLayout *mainLayout = new QHBoxLayout;
     mainLayout->addSpacing(20);
     mainLayout->addWidget(m_picLabel, 0, Qt::AlignVCenter);

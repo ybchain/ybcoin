@@ -15,7 +15,7 @@ class YbSideBarWidget : public QWidget
     Q_OBJECT
 public:
     explicit YbSideBarWidget(QWidget *parent = 0);
-    void setTitle(const QString &title, const int &height = 60, const int &width = 180);
+    void setTitle(const QString &title, const int &height = 60, const int &width = 250);
     void addToolButton(YbToolButton *button);
     void addSpacerItem(QSpacerItem *spacerItem);
 
