@@ -10,7 +10,7 @@ class YbTabWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit YbTabWidget(QWidget *parent = 0);
+    explicit YbTabWidget(QWidget *leftWidget = NULL, QWidget *rightWidget = NULL, QWidget *parent = 0);
 
 private slots:
     void leftTabButtonChecked(bool is);
@@ -20,6 +20,8 @@ private:
     YbTabButton *leftTabButton;
     YbTabButton *rightTabButton;
     YbStackedWidget *stackedWidget;
+    QWidget *m_leftWidget;
+    QWidget *m_rightWidget;
 };
 
 #endif // YBTABWIDGET_H

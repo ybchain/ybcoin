@@ -4,6 +4,7 @@
 #include <QWidget>
 
 class YbTabWidget;
+class YbInformation;
 
 class YbHelpPage : public QWidget
 {
@@ -12,6 +13,7 @@ public:
     explicit YbHelpPage(QWidget *parent = 0);
 
 private:
+    YbInformation *information;
     YbTabWidget *ybTabWidget;
 };
 
