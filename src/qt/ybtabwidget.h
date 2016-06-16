@@ -4,7 +4,7 @@
 #include <QWidget>
 
 class YbTabButton;
-class StackedWidget;
+class YbStackedWidget;
 
 class YbTabWidget : public QWidget
 {
@@ -19,7 +19,7 @@ private slots:
 private:
     YbTabButton *leftTabButton;
     YbTabButton *rightTabButton;
-    StackedWidget *stackedWidget;
+    YbStackedWidget *stackedWidget;
 };
 
 #endif // YBTABWIDGET_H

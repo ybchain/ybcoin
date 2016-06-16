@@ -10,13 +10,4 @@ YbStackedWidget::YbStackedWidget(QWidget *parent) :
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
     this->setPalette(pa);
-
-    createWidget();
-    this->setCurrentWidget(overviewPage);
-}
-
-void YbStackedWidget::createWidget()
-{
-    overviewPage = new YbOverviewPage;
-    addWidget(overviewPage);
 }
