@@ -202,7 +202,10 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/yboverviewpage.h \
     src/qt/ybpushbutton.h \
     src/qt/yblabel.h \
-    src/qt/ybsettingpage.h
+    src/qt/ybsettingpage.h \
+    src/qt/ybtabbutton.h \
+    src/qt/ybtabwidget.h \
+    src/qt/ybhelppage.h
 
 SOURCES += src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
@@ -278,7 +281,10 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/yboverviewpage.cpp \
     src/qt/ybpushbutton.cpp \
     src/qt/yblabel.cpp \
-    src/qt/ybsettingpage.cpp
+    src/qt/ybsettingpage.cpp \
+    src/qt/ybtabbutton.cpp \
+    src/qt/ybtabwidget.cpp \
+    src/qt/ybhelppage.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc

@@ -13,8 +13,8 @@ YbPushButton::YbPushButton(QPixmap pixmap, QString text, QWidget *parent) :
 YbPushButton::YbPushButton(QString text, QWidget *parent) :
     QPushButton(parent)
 {
-    setFixedHeight(40);
     setFixedWidth(60);
+    setFixedHeight(40);
     setText(text);
     setStyleSheet("QPushButton{background-color: rgb(30, 144, 255); border-radius: 5px;} QPushButton:hover{background-color: rgb(0, 0, 255);} QPushButton:pressed{background-color: rgb(65, 105, 225);} QPushButton:disabled{background-color: rgb(190, 190, 190);}");
 }
