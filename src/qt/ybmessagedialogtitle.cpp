@@ -45,6 +45,66 @@ YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QStrin
     setLayout(mainLayout);
 }
 
+YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QWidget *parent)
+{
+    this->title = new QLabel;
+    setAutoFillBackground(true);
+    QPalette pa = palette();
+    pa.setColor(QPalette::Background,QColor(224, 238, 238));
+    this->setPalette(pa);
+
+    setFixedHeight(60);
+    setFixedWidth(500);
+
+    boldFont.setBold(true);
+
+    this->title->setStyleSheet("font-size:20px;");
+    this->title->setFont(boldFont);
+    this->title->setText(title);
+
+    QLabel *pixLabel = new QLabel;
+    pixLabel->setPixmap(pixmap);
+    pixLabel->setFixedSize(pixmap.size());
+    QHBoxLayout *titleLayout = new QHBoxLayout;
+    titleLayout->addSpacing(10);
+    titleLayout->addWidget(pixLabel);
+    titleLayout->addWidget(this->title);
+    titleLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addLayout(titleLayout);
+
+    setLayout(mainLayout);
+}
+
+YbMessageDialogTitle::YbMessageDialogTitle(QString title, QWidget *parent) :
+    QWidget(parent)
+{
+    this->title = new QLabel;
+    setAutoFillBackground(true);
+    QPalette pa = palette();
+    pa.setColor(QPalette::Background,QColor(224, 238, 238));
+    this->setPalette(pa);
+
+    setFixedHeight(60);
+    setFixedWidth(500);
+
+    boldFont.setBold(true);
+
+    this->title->setStyleSheet("font-size:20px;");
+    this->title->setFont(boldFont);
+    this->title->setText(title);
+
+    QHBoxLayout *titleLayout = new QHBoxLayout;
+    titleLayout->addWidget(this->title);
+    titleLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addLayout(titleLayout);
+
+    setLayout(mainLayout);
+}
+
 YbMessageDialogTitle::~YbMessageDialogTitle()
 {
     if(title != NULL){
@@ -60,4 +120,9 @@ YbMessageDialogTitle::~YbMessageDialogTitle()
 void YbMessageDialogTitle::setTitle(const QString &title)
 {
     this->title->setText(title);
+}
+
+void YbMessageDialogTitle::setTitleInfo(const QString &titleInfo)
+{
+    this->titleInfo->setText(titleInfo);
 }

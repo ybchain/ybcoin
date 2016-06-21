@@ -211,7 +211,8 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/ybsendcoinsdialog.h \
     src/qt/ybmessagedialogtitle.h \
     src/qt/ybreceivecoinsdialog.h \
-    src/qt/ybsendsigndialog.h
+    src/qt/ybsendsigndialog.h \
+    src/qt/ybencryptiondialog.h
 
 SOURCES += src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
@@ -296,7 +297,8 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/ybsendcoinsdialog.cpp \
     src/qt/ybmessagedialogtitle.cpp \
     src/qt/ybreceivecoinsdialog.cpp \
-    src/qt/ybsendsigndialog.cpp
+    src/qt/ybsendsigndialog.cpp \
+    src/qt/ybencryptiondialog.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
