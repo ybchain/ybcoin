@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QList>
 
+class YbMessageDialogTitle;
 class QVBoxLayout;
 class QHBoxLayout;
 class YbPushButton;
@@ -13,19 +14,6 @@ class QComboBox;
 class QLabel;
 class QFont;
 
-class SendCoinsTitle : public QWidget
-{
-    Q_OBJECT
-public:
-    explicit SendCoinsTitle(QWidget *parent = 0);
-    ~SendCoinsTitle();
-    void setTitle(const QString &title);
-
-private:
-    QFont boldFont;
-    QLabel *title;
-    QLabel *titleInfo;
-};
 
 class SendCoinsButtonBar : public QWidget
 {
@@ -92,7 +80,7 @@ private slots:
 
 private:
     QFont boldFont;
-    SendCoinsTitle *title;
+    YbMessageDialogTitle *title;
     SendCoinsButtonBar *buttonBar;
     QLineEdit *addAsLabel;
     QVBoxLayout *receiverLayout;

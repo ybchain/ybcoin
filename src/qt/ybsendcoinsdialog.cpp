@@ -1,5 +1,6 @@
 #include "ybsendcoinsdialog.h"
 #include "ybpushbutton.h"
+#include "ybmessagedialogtitle.h"
 
 #include <QPainter>
 #include <QHBoxLayout>
@@ -13,9 +14,12 @@
 #include <QScrollArea>
 
 YbSendCoinsDialog::YbSendCoinsDialog(QWidget *parent) :
-    addAsLabel(new QLineEdit), title(new SendCoinsTitle),
-    buttonBar(new SendCoinsButtonBar), QWidget(parent)
+    addAsLabel(new QLineEdit), buttonBar(new SendCoinsButtonBar), QWidget(parent)
 {
+    QPixmap sendPix(":icons/sendindialog");
+    QString titleStr(tr("发送"));
+    QString titleInfoStr(tr("立即像任意元宝币地址发送元宝币。"));
+    title = new YbMessageDialogTitle(sendPix, titleStr, titleInfoStr, this);
     this->setFixedHeight(570);
     this->setFixedWidth(500);
     setAutoFillBackground(true);
@@ -278,64 +282,6 @@ void Receiver::drawBorderRect()
         painter.drawRect(rect);
     }
 }
-
-
-SendCoinsTitle::SendCoinsTitle(QWidget *parent) :
-    title(new QLabel), titleInfo(new QLabel), QWidget(parent)
-{
-    setAutoFillBackground(true);
-    QPalette pa = palette();
-    pa.setColor(QPalette::Background,QColor(224, 238, 238));
-    this->setPalette(pa);
-
-    setFixedHeight(85);
-    setFixedWidth(500);
-
-    boldFont.setBold(true);
-
-    title->setStyleSheet("font-size:20px;");
-    title->setFont(boldFont);
-    title->setText(tr("发送"));
-    titleInfo->setText(tr("立即向任意元宝币地址发送元宝币"));
-
-    QPixmap sendPix(":icons/sendindialog");
-    QLabel *pixLabel = new QLabel;
-    pixLabel->setPixmap(sendPix);
-    pixLabel->setFixedSize(sendPix.size());
-    QHBoxLayout *titleLayout = new QHBoxLayout;
-    titleLayout->addSpacing(10);
-    titleLayout->addWidget(pixLabel);
-    titleLayout->addWidget(title);
-    titleLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
-
-    QHBoxLayout *infoLayout = new QHBoxLayout;
-    infoLayout->addSpacing(10);
-    infoLayout->addWidget(titleInfo);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    mainLayout->addLayout(titleLayout);
-    mainLayout->addLayout(infoLayout);
-
-    setLayout(mainLayout);
-}
-
-SendCoinsTitle::~SendCoinsTitle()
-{
-    if(title != NULL){
-        delete title;
-        title = NULL;
-    }
-    if(titleInfo != NULL){
-        delete titleInfo;
-        titleInfo = NULL;
-    }
-}
-
-void SendCoinsTitle::setTitle(const QString &title)
-{
-    this->title->setText(title);
-}
-
 
 SendCoinsButtonBar::SendCoinsButtonBar(QWidget *parent) :
     QWidget(parent)

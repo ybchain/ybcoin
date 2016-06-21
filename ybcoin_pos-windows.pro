@@ -208,7 +208,10 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/ybhelppage.h \
     src/qt/ybinformation.h \
     src/qt/ybaddressbookpage.h \
-    ybsendcoinsdialog.h
+    src/qt/ybsendcoinsdialog.h \
+    src/qt/ybmessagedialogtitle.h \
+    src/qt/ybreceivecoinsdialog.h \
+    src/qt/ybsendsigndialog.h
 
 SOURCES += src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
@@ -290,7 +293,10 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/ybhelppage.cpp \
     src/qt/ybinformation.cpp \
     src/qt/ybaddressbookpage.cpp \
-    ybsendcoinsdialog.cpp
+    src/qt/ybsendcoinsdialog.cpp \
+    src/qt/ybmessagedialogtitle.cpp \
+    src/qt/ybreceivecoinsdialog.cpp \
+    src/qt/ybsendsigndialog.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
