@@ -3,10 +3,15 @@
 
 #include <QWidget>
 
+class WalletModel;
 class YbMessageDialogTitle;
 class YbPushButton;
+class QValidatedLineEdit;
+
+QT_BEGIN_NAMESPACE
 class QLineEdit;
 class QPlainTextEdit;
+QT_END_NAMESPACE
 
 class SendSignButtonBar : public QWidget
 {
@@ -15,12 +20,12 @@ public:
     explicit SendSignButtonBar(QWidget *parent = 0);
 
 signals:
-    void back();
-    void send();
+    void closeSignDlg();
+    void sign();
 
 private:
-    YbPushButton *backButton;
-    YbPushButton *sendButton;
+    YbPushButton *closeButton;
+    YbPushButton *signButton;
 };
 
 class YbSendSignDialog : public QWidget
@@ -29,20 +34,30 @@ class YbSendSignDialog : public QWidget
 public:
     explicit YbSendSignDialog(QWidget *parent = 0);
 
+    void setModel(WalletModel *model);
+
+    void setAddress(QString addr);
+
 private slots:
     void paste();
     void showAddr();
-    void showSign();
+
+    void close();
+    void copyToClipboard();
+    void signMessage();
 
 private:
+    void createWidget();
+
     YbMessageDialogTitle *title;
     YbPushButton *pasteButton;
     YbPushButton *addrButton;
     YbPushButton *addrSignButton;
-    QLineEdit *addrEdit;
-    QLineEdit *addrSignEdit;
-    QPlainTextEdit *label;
+    QValidatedLineEdit *signFrom;
+    QLineEdit *signature;
+    QPlainTextEdit *message;
     SendSignButtonBar *buttonBar;
+    WalletModel *model;
 };
 
 #endif // YBSENDSIGNDIALOG_H

@@ -1,4 +1,5 @@
 #include "ybreceivecoinsdialog.h"
+#include "ybmainwindow.h"
 #include "ybmessagedialogtitle.h"
 #include "ybpushbutton.h"
 
@@ -7,9 +8,45 @@
 #include <QLabel>
 #include <QSpacerItem>
 #include <QFont>
+#include <QApplication>
+#include <QClipboard>
 
 YbReceiveCoinsDialog::YbReceiveCoinsDialog(QWidget *parent) :
     QWidget(parent)
+{
+    createWidget();
+}
+
+void YbReceiveCoinsDialog::setLineEditFocus()
+{
+    signFrom->setFocus();
+}
+
+void YbReceiveCoinsDialog::paste()
+{
+    signFrom->setText(QApplication::clipboard()->text());
+    signFrom->setFocus();
+}
+
+void YbReceiveCoinsDialog::clear()
+{
+    this->signFrom->clear();
+    setLineEditFocus();
+}
+
+void YbReceiveCoinsDialog::sendSign()
+{
+    QString addr = signFrom->text();
+
+    emit showSendSign(addr);
+}
+
+void YbReceiveCoinsDialog::cancel()
+{
+    close();
+}
+
+void YbReceiveCoinsDialog::createWidget()
 {
     this->setFixedHeight(300);
     this->setFixedWidth(500);
@@ -21,7 +58,7 @@ YbReceiveCoinsDialog::YbReceiveCoinsDialog(QWidget *parent) :
     boldFont.setBold(true);
 
     QPixmap sendPix(":icons/sendindialog");
-    QString titleStr(tr("发送"));
+    QString titleStr(tr("接收"));
     QString titleInfoStr(tr("已为您创建可以与他人共享的地址，您可以用其接收元宝币。"));
     title = new YbMessageDialogTitle(sendPix, titleStr, titleInfoStr, this);
 
@@ -62,26 +99,6 @@ YbReceiveCoinsDialog::YbReceiveCoinsDialog(QWidget *parent) :
     mainLayout->addWidget(buttonBar);
 
     setLayout(mainLayout);
-}
-
-void YbReceiveCoinsDialog::paste()
-{
-
-}
-
-void YbReceiveCoinsDialog::clear()
-{
-    this->signFrom->clear();
-}
-
-void YbReceiveCoinsDialog::sendSign()
-{
-
-}
-
-void YbReceiveCoinsDialog::cancel()
-{
-    close();
 }
 
 

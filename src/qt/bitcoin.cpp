@@ -2,12 +2,11 @@
  * W.J. van der Laan 2011-2012
  * The Peercoin Developers 2013
  */
-#include "bitcoingui.h"
+#include "ybmainwindow.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"
 #include "guiutil.h"
-#include "mainwidget.h"
 
 #include "init.h"
 #include "ui_interface.h"
@@ -38,7 +37,7 @@ Q_IMPORT_PLUGIN(qtaccessiblewidgets)
 #endif
 
 // Need a global reference for the notifications to find the GUI
-static MainWidget *guiref;
+static YbMainWindow *guiref;
 static QSplashScreen *splashref;
 static WalletModel *walletmodel;
 static ClientModel *clientmodel;
@@ -129,7 +128,7 @@ std::string _(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occured. YBCoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", YbMainWindow::tr("A fatal error occured. YBCoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
@@ -232,18 +231,9 @@ int main(int argc, char *argv[])
     app.processEvents();
     app.setQuitOnLastWindowClosed(false);
 
-    QFile qssFile("./qss/default.qss");
-    qssFile.open(QFile::ReadOnly);
-    if(qssFile.isOpen()){
-        QString qss;
-        qss = QLatin1String(qssFile.readAll());
-        app.setStyleSheet(qss);
-        qssFile.close();
-    }
-
     try
     {
-        MainWidget window;
+        YbMainWindow window;
         guiref = &window;
 
         if(AppInit2(argc, argv))

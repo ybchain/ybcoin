@@ -21,7 +21,7 @@ void YbSeparater::drawLine()
 {
     QPainter painter(this);
     QPen pen;
-    pen.setColor(Qt::gray);
+    pen.setColor(QColor(211, 211, 211));
     painter.setPen(pen);
     QPoint p1(0, this->height() / 2);
     QPoint p2(this->width(), this->height() / 2);

@@ -3,6 +3,7 @@
 
 #include <QWidget>
 
+class ClientModel;
 class QLabel;
 class QCheckBox;
 
@@ -12,7 +13,19 @@ class YbInformation : public QWidget
 public:
     explicit YbInformation(QWidget *parent = 0);
 
+    void setClientModel(ClientModel *model);
+
+public slots:
+    /** Set number of connections shown in the UI */
+    void setNumConnections(int count);
+    /** Set number of blocks shown in the UI */
+    void setNumBlocks(int count);
+
 private:
+    void createWidget();
+
+    ClientModel *clientModel;
+
     QLabel *versionLabel;
     QLabel *clientNameLabel;
     QLabel *clientName;

@@ -3,7 +3,6 @@
         <file alias="peershares">res/icons/peershares.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
-        <file alias="send">res/icons/send.png</file>
         <file alias="toolbar">res/icons/toolbar.png</file>
         <file alias="connect_0">res/icons/connect0_16.png</file>
         <file alias="connect_1">res/icons/connect1_16.png</file>
@@ -43,6 +42,27 @@
         <file alias="max">res/icons/sys_button_max.png</file>
         <file alias="min">res/icons/sys_button_min.png</file>
         <file alias="menu">res/icons/title_bar_menu.png</file>
+        <file alias="grayhelp">res/icons/灰/帮助.png</file>
+        <file alias="grayexport">res/icons/灰/导出副本.png</file>
+        <file alias="grayaddress">res/icons/灰/地址簿.png</file>
+        <file alias="grayhistory">res/icons/灰/交易记录-.png</file>
+        <file alias="graysetting">res/icons/灰/设置.png</file>
+        <file alias="grayhome">res/icons/灰/主页.png</file>
+        <file alias="bluehelp">res/icons/深蓝/帮助-.png</file>
+        <file>res/icons/深蓝/导出.png</file>
+        <file alias="blueaddress">res/icons/深蓝/地址簿-.png</file>
+        <file alias="bluehistory">res/icons/深蓝/交易记录-副本.png</file>
+        <file alias="bluesetting">res/icons/深蓝/设置-.png</file>
+        <file alias="bluehome">res/icons/深蓝/主页-.png</file>
+        <file alias="ybsend">res/icons/发送icon.png</file>
+        <file alias="receive">res/icons/接受icon.png</file>
+        <file alias="copy">res/icons/地址簿/复制icon.png</file>
+        <file alias="add">res/icons/地址簿/加.png</file>
+        <file alias="delete">res/icons/地址簿/删除icon.png</file>
+        <file alias="copysign">res/icons/地址标签.png</file>
+        <file alias="closesend">res/icons/删除icon.png</file>
+        <file alias="addsend">res/icons/增加-icon.png</file>
+        <file alias="send">res/icons/send.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

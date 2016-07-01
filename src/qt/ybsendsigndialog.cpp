@@ -1,6 +1,14 @@
 #include "ybsendsigndialog.h"
 #include "ybmessagedialogtitle.h"
+#include "qvalidatedlineedit.h"
 #include "ybpushbutton.h"
+#include "guiutil.h"
+#include "walletmodel.h"
+#include "main.h"
+#include "wallet.h"
+#include "init.h"
+#include "util.h"
+#include "ybaddressbookpage.h"
 
 #include <QLineEdit>
 #include <QPlainTextEdit>
@@ -8,9 +16,102 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFont>
+#include <string>
+#include <vector>
+#include <QClipboard>
+#include <QInputDialog>
+#include <QList>
+#include <QListWidgetItem>
+#include <QMessageBox>
+#include <QApplication>
+#include <QClipboard>
 
 YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
     QWidget(parent)
+{
+    createWidget();
+    GUIUtil::setupAddressWidget(signFrom, this);
+}
+
+void YbSendSignDialog::setModel(WalletModel *model)
+{
+    this->model = model;
+}
+
+void YbSendSignDialog::setAddress(QString addr)
+{
+    signFrom->setText(addr);
+    message->setFocus();
+}
+
+void YbSendSignDialog::paste()
+{
+    setAddress(QApplication::clipboard()->text());
+}
+
+void YbSendSignDialog::showAddr()
+{
+    YbAddressBookPage dlg(YbAddressBookPage::ForSending, YbAddressBookPage::ReceivingTab, this);
+    dlg.setModel(model->getAddressTableModel());
+    if(dlg.exec())
+    {
+        setAddress(dlg.getReturnValue());
+    }
+}
+
+void YbSendSignDialog::close()
+{
+    QWidget::close();
+}
+
+void YbSendSignDialog::copyToClipboard()
+{
+    QApplication::clipboard()->setText(signature->text());
+}
+
+void YbSendSignDialog::signMessage()
+{
+    QString address = signFrom->text();
+
+    CBitcoinAddress addr(address.toStdString());
+    if (!addr.IsValid())
+    {
+        QMessageBox::critical(this, tr("Error signing"), tr("%1 is not a valid address.").arg(address),
+                              QMessageBox::Abort, QMessageBox::Abort);
+        return;
+    }
+
+    WalletModel::UnlockContext ctx(model->requestUnlock());
+    if(!ctx.isValid())
+    {
+        // Unlock wallet was cancelled
+        return;
+    }
+
+    CKey key;
+    if (!pwalletMain->GetKey(addr, key))
+    {
+        QMessageBox::critical(this, tr("Error signing"), tr("Private key for %1 is not available.").arg(address),
+                              QMessageBox::Abort, QMessageBox::Abort);
+        return;
+    }
+
+    CDataStream ss(SER_GETHASH, 0);
+    ss << strMessageMagic;
+    ss << message->document()->toPlainText().toStdString();
+
+    std::vector<unsigned char> vchSig;
+    if (!key.SignCompact(Hash(ss.begin(), ss.end()), vchSig))
+    {
+        QMessageBox::critical(this, tr("Error signing"), tr("Sign failed"),
+                              QMessageBox::Abort, QMessageBox::Abort);
+    }
+
+    signature->setText(QString::fromStdString(EncodeBase64(&vchSig[0], vchSig.size())));
+    signature->setFont(GUIUtil::bitcoinAddressFont());
+}
+
+void YbSendSignDialog::createWidget()
 {
     this->setFixedHeight(400);
     this->setFixedWidth(500);
@@ -36,13 +137,15 @@ YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
     addrButton = new YbPushButton(addrPix);
     connect(addrButton, SIGNAL(clicked()), this, SLOT(showAddr()));
 
-    QPixmap signPix(":icons/sign");
+    QPixmap signPix(":icons/copysign");
     addrSignButton = new YbPushButton(signPix);
-    connect(addrSignButton, SIGNAL(clicked()), this, SLOT(showSign()));
+    connect(addrSignButton, SIGNAL(clicked()), this, SLOT(copyToClipboard()));
 
-    addrEdit = new QLineEdit;
-    addrSignEdit = new QLineEdit;
-    label = new QPlainTextEdit;
+    signFrom = new QValidatedLineEdit(this);
+    signature = new QLineEdit;
+    message = new QPlainTextEdit;
+    signature->setReadOnly(true);
+    signature->setText(tr("点击\"消息签名\"获取签名"));
 
     QHBoxLayout *hlayout1 = new QHBoxLayout;
     hlayout1->setSpacing(0);
@@ -51,7 +154,7 @@ YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
     hlayout1->addSpacing(25);
     hlayout1->addWidget(addrText);
     hlayout1->addSpacing(25);
-    hlayout1->addWidget(addrEdit);
+    hlayout1->addWidget(signFrom);
     hlayout1->addWidget(pasteButton);
     hlayout1->addWidget(addrButton);
     hlayout1->addSpacing(25);
@@ -63,7 +166,7 @@ YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
     hlayout2->addSpacing(25);
     hlayout2->addWidget(labelText);
     hlayout2->addSpacing(25);
-    hlayout2->addWidget(label);
+    hlayout2->addWidget(message);
     hlayout2->addSpacing(25);
 
     QHBoxLayout *hlayout3 = new QHBoxLayout;
@@ -72,11 +175,13 @@ YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
     addrSignText->setFont(boldFont);
     hlayout3->addSpacing(25);
     hlayout3->addWidget(addrSignText);
-    hlayout3->addWidget(addrSignEdit);
+    hlayout3->addWidget(signature);
     hlayout3->addWidget(addrSignButton);
     hlayout3->addSpacing(25);
 
     buttonBar = new SendSignButtonBar(this);
+    connect(buttonBar, SIGNAL(closeSignDlg()), this, SLOT(close()));
+    connect(buttonBar, SIGNAL(sign()), this, SLOT(signMessage()));
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->setMargin(0);
@@ -91,21 +196,6 @@ YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
     setLayout(mainLayout);
 }
 
-void YbSendSignDialog::paste()
-{
-
-}
-
-void YbSendSignDialog::showAddr()
-{
-
-}
-
-void YbSendSignDialog::showSign()
-{
-
-}
-
 
 SendSignButtonBar::SendSignButtonBar(QWidget *parent)
 {
@@ -117,15 +207,15 @@ SendSignButtonBar::SendSignButtonBar(QWidget *parent)
     setFixedHeight(60);
     setFixedWidth(500);
 
-    backButton = new YbPushButton(tr("返回"), 60, 30, false, this);
-    sendButton = new YbPushButton(tr("发送"), 60, 30, true, this);
-    connect(backButton, SIGNAL(clicked()), this, SIGNAL(back()));
-    connect(sendButton, SIGNAL(clicked()), this, SIGNAL(send()));
+    closeButton = new YbPushButton(tr("关闭"), 60, 30, false, this);
+    signButton = new YbPushButton(tr("消息签名"), 60, 30, true, this);
+    connect(closeButton, SIGNAL(clicked()), this, SIGNAL(closeSignDlg()));
+    connect(signButton, SIGNAL(clicked()), this, SIGNAL(sign()));
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
-    mainLayout->addWidget(backButton);
+    mainLayout->addWidget(closeButton);
     mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
-    mainLayout->addWidget(sendButton);
+    mainLayout->addWidget(signButton);
 
     setLayout(mainLayout);
 }

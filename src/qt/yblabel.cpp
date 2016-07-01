@@ -1,10 +1,8 @@
 #include "yblabel.h"
 
-YbLabel::YbLabel(QString text, labelType type, QWidget *parent) :
+YbLabel::YbLabel(QWidget *parent) :
     QLabel(parent)
 {
-    setText(text);
-    setLabelType(type);
 }
 
 void YbLabel::setLabelType(labelType type)
@@ -21,6 +19,7 @@ void YbLabel::setLabelType(labelType type)
     case warning:
         setFixedHeight(50);
         setStyleSheet("QLabel{background-color: rgb(255, 231, 186); border-radius: 3px;}");
+        break;
     default:
         break;
     }

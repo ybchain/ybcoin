@@ -3,8 +3,10 @@
 
 #include <QWidget>
 
+class ClientModel;
 class YbTabWidget;
 class YbInformation;
+class YbConsole;
 
 class YbHelpPage : public QWidget
 {
@@ -12,9 +14,14 @@ class YbHelpPage : public QWidget
 public:
     explicit YbHelpPage(QWidget *parent = 0);
 
+    void setClientModel(ClientModel *model);
+
 private:
+    void createWidget();
+
     YbInformation *information;
     YbTabWidget *ybTabWidget;
+    YbConsole *console;
 };
 
 #endif // YBHELPPAGE_H

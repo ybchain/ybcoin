@@ -13,6 +13,20 @@ class YbSettingPage : public QWidget
 public:
     explicit YbSettingPage(QWidget *parent = 0);
 
+    void createWidget();
+
+    void setButton1Enabled(bool is);
+    void setButton2Enabled(bool is);
+    void setButton3Enabled(bool is);
+
+    void setButton1Checked(bool is);
+    void setButton2Checked(bool is);
+
+signals:
+    void button1Clicked(bool);
+    void button2Clicked(bool);
+    void button3Clicked();
+
 private:
     QLabel *qlabel1;
     QLabel *qlabel2;

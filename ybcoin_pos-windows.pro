@@ -118,13 +118,14 @@ QMAKE_CXXFLAGS_WARN_ON = -Wall -Wextra -Wformat -Wformat-security -Wno-invalid-o
 
 # Input
 DEPENDPATH += src src/json src/qt
-HEADERS += src/qt/bitcoingui.h \
+HEADERS += \
+#    src/qt/bitcoingui.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
-    src/qt/sendcoinsdialog.h \
-    src/qt/addressbookpage.h \
-    src/qt/messagepage.h \
+#    src/qt/sendcoinsdialog.h \
+#    src/qt/addressbookpage.h \
+#    src/qt/messagepage.h \
     src/qt/aboutdialog.h \
     src/qt/editaddressdialog.h \
     src/qt/bitcoinaddressvalidator.h \
@@ -170,10 +171,10 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/transactionview.h \
     src/qt/walletmodel.h \
     src/bitcoinrpc.h \
-    src/qt/overviewpage.h \
+#    src/qt/overviewpage.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
-    src/qt/sendcoinsentry.h \
+#    src/qt/sendcoinsentry.h \
     src/qt/qvalidatedlineedit.h \
     src/qt/bitcoinunits.h \
     src/qt/qvaluecombobox.h \
@@ -183,11 +184,11 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/qtipcserver.h \
     src/allocators.h \
     src/ui_interface.h \
-    src/qt/rpcconsole.h \
+#    src/qt/rpcconsole.h \
     src/kernel.h \
     src/distribution.h \
     src/qt/distributedivdialog.h \
-    src/qt/mainwidget.h \
+#    src/qt/mainwidget.h \
     src/qt/titlewidget.h \
     src/qt/toolwidget.h \
     src/qt/pushbutton.h \
@@ -212,16 +213,19 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/ybmessagedialogtitle.h \
     src/qt/ybreceivecoinsdialog.h \
     src/qt/ybsendsigndialog.h \
-    src/qt/ybencryptiondialog.h
+    src/qt/ybencryptiondialog.h \
+    src/qt/ybmainwindow.h \
+    src/qt/ybconsole.h \
+    src/qt/receiversform.h
 
 SOURCES += src/qt/bitcoin.cpp \
-    src/qt/bitcoingui.cpp \
+#    src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
-    src/qt/sendcoinsdialog.cpp \
-    src/qt/addressbookpage.cpp \
-    src/qt/messagepage.cpp \
+#    src/qt/sendcoinsdialog.cpp \
+#    src/qt/addressbookpage.cpp \
+#    src/qt/messagepage.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
     src/qt/bitcoinaddressvalidator.cpp \
@@ -257,10 +261,10 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/walletmodel.cpp \
     src/bitcoinrpc.cpp \
     src/rpcdump.cpp \
-    src/qt/overviewpage.cpp \
+#    src/qt/overviewpage.cpp \
     src/qt/csvmodelwriter.cpp \
     src/crypter.cpp \
-    src/qt/sendcoinsentry.cpp \
+#    src/qt/sendcoinsentry.cpp \
     src/qt/qvalidatedlineedit.cpp \
     src/qt/bitcoinunits.cpp \
     src/qt/qvaluecombobox.cpp \
@@ -268,12 +272,12 @@ SOURCES += src/qt/bitcoin.cpp \
     src/protocol.cpp \
     src/qt/notificator.cpp \
     src/qt/qtipcserver.cpp \
-    src/qt/rpcconsole.cpp \
+#    src/qt/rpcconsole.cpp \
     src/kernel.cpp \
     src/distribution.cpp \
     src/scanbalance.cpp \
     src/qt/distributedivdialog.cpp \
-    src/qt/mainwidget.cpp \
+#    src/qt/mainwidget.cpp \
     src/qt/titlewidget.cpp \
     src/qt/toolwidget.cpp \
     src/qt/pushbutton.cpp \
@@ -298,23 +302,27 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/ybmessagedialogtitle.cpp \
     src/qt/ybreceivecoinsdialog.cpp \
     src/qt/ybsendsigndialog.cpp \
-    src/qt/ybencryptiondialog.cpp
+    src/qt/ybencryptiondialog.cpp \
+    src/qt/ybmainwindow.cpp \
+    src/qt/ybconsole.cpp \
+    src/qt/receiversform.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
 
 FORMS += \
-    src/qt/forms/sendcoinsdialog.ui \
-    src/qt/forms/addressbookpage.ui \
-    src/qt/forms/messagepage.ui \
+#    src/qt/forms/sendcoinsdialog.ui \
+#    src/qt/forms/addressbookpage.ui \
+#    src/qt/forms/messagepage.ui \
     src/qt/forms/aboutdialog.ui \
     src/qt/forms/editaddressdialog.ui \
     src/qt/forms/transactiondescdialog.ui \
-    src/qt/forms/overviewpage.ui \
-    src/qt/forms/sendcoinsentry.ui \
+#    src/qt/forms/overviewpage.ui \
+#    src/qt/forms/sendcoinsentry.ui \
     src/qt/forms/askpassphrasedialog.ui \
-    src/qt/forms/rpcconsole.ui \
-    src/qt/forms/distributedivdialog.ui
+#    src/qt/forms/rpcconsole.ui \
+    src/qt/forms/distributedivdialog.ui \
+    src/qt/receiversform.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h

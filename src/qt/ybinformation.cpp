@@ -1,4 +1,5 @@
 #include "ybinformation.h"
+#include "clientmodel.h"
 
 #include <QLabel>
 #include <QHBoxLayout>
@@ -6,13 +7,56 @@
 #include <QSpacerItem>
 #include <QCheckBox>
 #include <QFont>
+#include <QDateTime>
 
 YbInformation::YbInformation(QWidget *parent) :
     QWidget(parent)
 {
+    createWidget();
+}
+
+void YbInformation::setClientModel(ClientModel *model)
+{
+    this->clientModel = model;
+    if(model)
+    {
+        // Subscribe to information, replies, messages, errors
+        connect(model, SIGNAL(numConnectionsChanged(int)), this, SLOT(setNumConnections(int)));
+        connect(model, SIGNAL(numBlocksChanged(int)), this, SLOT(setNumBlocks(int)));
+
+        // Provide initial values
+        clientVersion->setText(model->formatFullVersion());
+        clientName->setText(model->clientName());
+        buildDate->setText(model->formatBuildDate());
+
+        setNumConnections(model->getNumConnections());
+        isTestNet->setChecked(model->isTestNet());
+
+        setNumBlocks(model->getNumBlocks());
+    }
+}
+
+void YbInformation::setNumConnections(int count)
+{
+    numberOfConnections->setText(QString::number(count));
+}
+
+void YbInformation::setNumBlocks(int count)
+{
+    numberOfBlocks->setText(QString::number(count));
+    if(clientModel)
+    {
+        // If there is no current number available display N/A instead of 0, which can't ever be true
+        totalBlocks->setText(clientModel->getNumBlocksOfPeers() == 0 ? tr("N/A") : QString::number(clientModel->getNumBlocksOfPeers()));
+        lastBlockTime->setText(clientModel->getLastBlockDate().toString());
+    }
+}
+
+void YbInformation::createWidget()
+{
     setAutoFillBackground(true);
     QPalette pa = palette();
-    pa.setColor(QPalette::Background,QColor(245, 255, 240));
+    pa.setColor(QPalette::Background,QColor(255, 255, 255));
     this->setPalette(pa);
 
     QFont font;
@@ -65,6 +109,7 @@ YbInformation::YbInformation(QWidget *parent) :
 
     onTestnetLabel = new QLabel(tr("测试网"));
     isTestNet = new QCheckBox;
+    isTestNet->setEnabled(false);
     QHBoxLayout *hlayout7 = new QHBoxLayout;
     hlayout7->addWidget(onTestnetLabel);
     hlayout7->addSpacerItem(new QSpacerItem(200, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));

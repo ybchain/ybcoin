@@ -13,7 +13,7 @@ class YbLabel : public QLabel
 {
     Q_OBJECT
 public:
-    explicit YbLabel(QString text, labelType type = enable, QWidget *parent = 0);
+    explicit YbLabel(QWidget *parent = 0);
     void setLabelType(labelType type);
 };
 

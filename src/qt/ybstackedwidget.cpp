@@ -1,5 +1,4 @@
 #include "ybstackedwidget.h"
-#include "yboverviewpage.h"
 
 YbStackedWidget::YbStackedWidget(QWidget *parent) :
     QStackedWidget(parent)

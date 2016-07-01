@@ -16,7 +16,7 @@ YbPushButton::YbPushButton(QString text, QWidget *parent) :
     setFixedWidth(60);
     setFixedHeight(40);
     setText(text);
-    setStyleSheet("QPushButton{background-color: rgb(30, 144, 255); border-radius: 5px;} QPushButton:hover{background-color: rgb(0, 0, 255);} QPushButton:pressed{background-color: rgb(65, 105, 225);} QPushButton:disabled{background-color: rgb(190, 190, 190);}");
+    setStyleSheet("QPushButton{background-color: rgb(100, 149, 237); border-radius: 5px;} QPushButton:hover{background-color: rgb(123, 104, 238);} QPushButton:pressed{background-color: rgb(106, 90, 205);} QPushButton:checked{background-color: rgb(106, 90, 205);} QPushButton:disabled{background-color: rgb(190, 190, 190);}");
 }
 
 YbPushButton::YbPushButton(QString text, int width, int height, bool hasBackColor, QWidget *parent) :

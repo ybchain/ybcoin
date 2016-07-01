@@ -15,8 +15,8 @@ YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QStrin
     pa.setColor(QPalette::Background,QColor(224, 238, 238));
     this->setPalette(pa);
 
-    setFixedHeight(85);
-    setFixedWidth(500);
+    setMinimumHeight(85);
+    setMinimumWidth(500);
 
     boldFont.setBold(true);
 
@@ -48,13 +48,14 @@ YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QStrin
 YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QWidget *parent)
 {
     this->title = new QLabel;
+    this->titleInfo = NULL;
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(224, 238, 238));
     this->setPalette(pa);
 
-    setFixedHeight(60);
-    setFixedWidth(500);
+    setMinimumHeight(60);
+    setMinimumWidth(500);
 
     boldFont.setBold(true);
 
@@ -81,13 +82,14 @@ YbMessageDialogTitle::YbMessageDialogTitle(QString title, QWidget *parent) :
     QWidget(parent)
 {
     this->title = new QLabel;
+    this->titleInfo = NULL;
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(224, 238, 238));
     this->setPalette(pa);
 
-    setFixedHeight(60);
-    setFixedWidth(500);
+    setMinimumHeight(60);
+    setMinimumWidth(500);
 
     boldFont.setBold(true);
 

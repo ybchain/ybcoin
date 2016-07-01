@@ -1,12 +1,14 @@
 #include "ybtabwidget.h"
 #include "ybtabbutton.h"
 #include "ybstackedwidget.h"
+#include "ybinformation.h"
+#include "ybconsole.h"
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QSpacerItem>
 
-YbTabWidget::YbTabWidget(QWidget *leftWidget, QWidget *rightWidget, QWidget *parent) :
+YbTabWidget::YbTabWidget(YbInformation *leftWidget, YbConsole *rightWidget, QWidget *parent) :
     QWidget(parent)
 {
     leftTabButton = new YbTabButton(tr("信息"), true);
@@ -32,9 +34,7 @@ YbTabWidget::YbTabWidget(QWidget *leftWidget, QWidget *rightWidget, QWidget *par
     tabButtonLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->setMargin(0);
-    mainLayout->addSpacing(10);
     mainLayout->addLayout(tabButtonLayout);
-    mainLayout->addSpacing(10);
     mainLayout->addWidget(stackedWidget);
     mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding));
     setLayout(mainLayout);
@@ -58,6 +58,7 @@ void YbTabWidget::rightTabButtonChecked(bool is)
         leftTabButton->setChecked(false);
         if(m_rightWidget != NULL){
             stackedWidget->setCurrentWidget(m_rightWidget);
+            m_rightWidget->setLineEditFocus();
         }
     }else{
         rightTabButton->setChecked(true);

@@ -33,6 +33,7 @@ TransactionView::TransactionView(QWidget *parent) :
     QWidget(parent), model(0), transactionProxyModel(0),
     transactionView(0)
 {
+    setStyleSheet("QTableView{border: 2px groove rgb(211, 211, 211)}");
     // Build filter row
     setContentsMargins(0,0,0,0);
 
