@@ -352,7 +352,6 @@ void YbConsole::scrollToEnd()
 
 void YbConsole::createWidget()
 {
-    setMinimumHeight(400);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
@@ -366,11 +365,9 @@ void YbConsole::createWidget()
 
     connect(lineEdit, SIGNAL(returnPressed()), this, SLOT(lineEditPressed()));
 
-    QVBoxLayout *vlayout = new QVBoxLayout;
-    vlayout->addWidget(messagesWidget);
     QHBoxLayout *hlayout1 = new QHBoxLayout;
     hlayout1->addSpacing(20);
-    hlayout1->addLayout(vlayout);
+    hlayout1->addWidget(messagesWidget);
     hlayout1->addSpacing(20);
 
     QHBoxLayout *hlayout2 = new QHBoxLayout;

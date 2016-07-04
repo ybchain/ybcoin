@@ -36,7 +36,6 @@ YbTabWidget::YbTabWidget(YbInformation *leftWidget, YbConsole *rightWidget, QWid
     mainLayout->setMargin(0);
     mainLayout->addLayout(tabButtonLayout);
     mainLayout->addWidget(stackedWidget);
-    mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding));
     setLayout(mainLayout);
 }
 
