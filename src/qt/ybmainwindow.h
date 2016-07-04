@@ -100,7 +100,7 @@ private:
     QAction *openRPCConsoleAction;
     QAction *distributeDividendsAction;
 
-    QMenu *menu;
+    QMenuBar *appMenuBar;
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;
     YbConsole *rpcConsole;
@@ -124,7 +124,7 @@ private:
     /** Create the main UI actions. */
     void createActions();
     /** Create the menu bar and submenus. */
-    void createMenu();
+    void createMenuBar();
     /** Create system tray (notification) icon */
     void createTrayIcon();
 

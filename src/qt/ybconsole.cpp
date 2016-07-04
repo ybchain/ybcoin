@@ -352,6 +352,7 @@ void YbConsole::scrollToEnd()
 
 void YbConsole::createWidget()
 {
+    setMinimumHeight(400);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));

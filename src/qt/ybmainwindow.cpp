@@ -81,6 +81,7 @@ YbMainWindow::YbMainWindow(QWidget *parent) :
     resize(850,600);
 
     createActions();
+    createMenuBar();
     createWidgets();
     createStatusBar();
 
@@ -222,7 +223,7 @@ void YbMainWindow::dropEvent(QDropEvent *event)
 
 void YbMainWindow::createWidgets()
 {
-    setMinimumHeight(675);
+    //setMinimumHeight(675);
     QWidget *centralWidget = new QWidget(this);
     QVBoxLayout *sideBarLayout = new QVBoxLayout;
     sideBar = new YbSideBarWidget(this);
@@ -415,11 +416,17 @@ void YbMainWindow::createActions()
     connect(distributeDividendsAction, SIGNAL(triggered()), this, SLOT(distributeDividendsClicked()));
 }
 
-void YbMainWindow::createMenu()
+void YbMainWindow::createMenuBar()
 {
-    menu = new QMenu;
+#ifdef Q_WS_MAC
+    // Create a decoupled menu bar on Mac which stays even if the window is closed
+    appMenuBar = new QMenuBar();
+#else
+    // Get the main window's menu bar on other platforms
+    appMenuBar = menuBar();
+#endif
     // Configure the menus
-    QMenu *file = menu->addMenu(tr("&File"));
+    QMenu *file = appMenuBar->addMenu(tr("&File"));
     file->addAction(backupWalletAction);
     file->addAction(exportAction);
 #ifndef FIRST_CLASS_MESSAGING
@@ -428,20 +435,20 @@ void YbMainWindow::createMenu()
     file->addSeparator();
     file->addAction(quitAction);
 
-    QMenu *shares = menu->addMenu(tr("S&hares"));
+    QMenu *shares = appMenuBar->addMenu(tr("S&hares"));
     shares->addAction(exportPeercoinKeysAction);
     shares->addAction(distributeDividendsAction);
 
-    QMenu *settings = menu->addMenu(tr("&Settings"));
-    settings->addAction(encryptWalletAction);
-    settings->addAction(unlockForMintingAction);
-    settings->addAction(changePassphraseAction);
-    settings->addSeparator();
+    QMenu *settings = appMenuBar->addMenu(tr("&Settings"));
+//    settings->addAction(encryptWalletAction);
+//    settings->addAction(unlockForMintingAction);
+//    settings->addAction(changePassphraseAction);
+//    settings->addSeparator();
     settings->addAction(optionsAction);
 
-    QMenu *help = menu->addMenu(tr("&Help"));
-    help->addAction(openRPCConsoleAction);
-    help->addSeparator();
+    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+//    help->addAction(openRPCConsoleAction);
+//    help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
 }

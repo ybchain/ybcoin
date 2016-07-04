@@ -25,6 +25,8 @@
 #include <QCoreApplication>
 #include <QScrollBar>
 #include <QMessageBox>
+#include <QLocale>
+#include <QTextDocument>
 
 Receiver::Receiver(QWidget *parent) :
     isDrawBorder(true), payTo(new QValidatedLineEdit(this)), payAmount(new BitcoinAmountField(this)),

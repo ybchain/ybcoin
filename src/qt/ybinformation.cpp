@@ -162,7 +162,6 @@ void YbInformation::createWidget()
     vlayout->addLayout(hlayout9);
     vlayout->addLayout(hlayout10);
     vlayout->addLayout(hlayout11);
-    vlayout->addSpacing(30);
     vlayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
