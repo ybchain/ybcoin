@@ -1,6 +1,5 @@
 #include "receiversform.h"
 #include "ui_receiversform.h"
-#include "ybpushbutton.h"
 #include "qvalidatedlineedit.h"
 #include "guiutil.h"
 #include "bitcoinunits.h"
@@ -9,6 +8,7 @@
 #include "optionsmodel.h"
 #include "addresstablemodel.h"
 #include "bitcoinamountfield.h"
+#include "yblabelbutton.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -177,7 +177,7 @@ void Receiver::paintEvent(QPaintEvent *e)
 
 void Receiver::createWidget()
 {
-    this->setFixedHeight(150);
+    this->setMinimumHeight(150);
     this->setMinimumWidth(500);
     setAutoFillBackground(true);
     QPalette pa = palette();
@@ -189,24 +189,24 @@ void Receiver::createWidget()
     setStyleSheet("QLineEdit{border: 2px groove rgb(211, 211, 211)} QDoubleSpinBox{border: 2px groove rgb(211, 211, 211);} QComboBox{border: 2px groove rgb(211, 211, 211);}");
 
     payTo->setToolTip(tr("输入地址"));
-    payTo->setFixedHeight(25);
+    payTo->setMinimumHeight(25);
     payTo->setMinimumWidth(370);
 
     QPixmap closePix(":icons/closesend");
-    closeButton = new YbPushButton(closePix);
+    closeButton = new YbLabelButton(closePix);
     QHBoxLayout *closeLayout = new QHBoxLayout;
     closeLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     closeLayout->addWidget(closeButton);
 //    closeLayout->addSpacing(1);
-    connect(closeButton, SIGNAL(clicked()), this, SIGNAL(closeReceiver()));
+    connect(closeButton, SIGNAL(labelButtonClicked()), this, SIGNAL(closeReceiver()));
 
     QPixmap addPix(":icons/addsend");
-    addButton = new YbPushButton(addPix);
+    addButton = new YbLabelButton(addPix);
     QHBoxLayout *addLayout = new QHBoxLayout;
     addLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     addLayout->addWidget(addButton);
     addLayout->addSpacing(10);
-    connect(addButton, SIGNAL(clicked()), this, SIGNAL(addReceiver()));
+    connect(addButton, SIGNAL(labelButtonClicked()), this, SIGNAL(addReceiver()));
 
     QLabel *receiverLabel = new QLabel(tr("接收者："));
     receiverLabel->setFont(boldFont);
@@ -218,7 +218,7 @@ void Receiver::createWidget()
     payToLayout->addWidget(payTo);
     payToLayout->addSpacing(33);
 
-    payAmount->setFixedHeight(25);
+    payAmount->setMinimumHeight(25);
     payAmount->setMinimumWidth(370);
     QHBoxLayout *moneyLayout = new QHBoxLayout;
     //moneyLayout->addSpacing();
@@ -514,5 +514,8 @@ void ReceiversForm::createWidget()
     ui->widget->setStyleSheet("QWidget{background-color: rgb(255, 255, 255)}");
     layout = new QVBoxLayout;
     layout->setMargin(0);
-    ui->widget->setLayout(layout);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addLayout(layout);
+    mainLayout->addSpacerItem(new QSpacerItem(20, 16777212, QSizePolicy::Minimum, QSizePolicy::Maximum));
+    ui->widget->setLayout(mainLayout);
 }

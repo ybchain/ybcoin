@@ -63,6 +63,7 @@
         <file alias="closesend">res/icons/删除icon.png</file>
         <file alias="addsend">res/icons/增加-icon.png</file>
         <file alias="send">res/icons/send.png</file>
+        <file alias="paste">res/icons/复制icon.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

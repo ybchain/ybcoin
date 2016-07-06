@@ -11,12 +11,12 @@ class ReceiversForm;
 class WalletModel;
 class SendCoinsRecipient;
 class BitcoinAmountField;
+class YbLabelButton;
 
 QT_BEGIN_NAMESPACE
 class QLineEdit;
 class QDoubleSpinBox;
 class QComboBox;
-class YbPushButton;
 class QVBoxLayout;
 class QValidatedLineEdit;
 QT_END_NAMESPACE
@@ -69,8 +69,8 @@ private:
 
     QFont boldFont;
     bool isDrawBorder;
-    YbPushButton *closeButton;
-    YbPushButton *addButton;
+    YbLabelButton *closeButton;
+    YbLabelButton *addButton;
     QValidatedLineEdit *payTo;
     BitcoinAmountField *payAmount;
     WalletModel *model;

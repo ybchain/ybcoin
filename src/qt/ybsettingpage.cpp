@@ -56,7 +56,7 @@ void YbSettingPage::createWidget()
     hLayout1_v->addSpacing(10);
     hLayout1_v->addWidget(textLabel1);
     hLayout1->addLayout(hLayout1_v);
-    hLayout1->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+    hLayout1->addSpacerItem(new QSpacerItem(16777212, 20, QSizePolicy::Maximum, QSizePolicy::Minimum));
     hLayout1->addWidget(button1, Qt::AlignVCenter);
 
     QHBoxLayout *hLayout2 = new QHBoxLayout;
@@ -70,7 +70,7 @@ void YbSettingPage::createWidget()
     hLayout2_v->addSpacing(10);
     hLayout2_v->addWidget(textLabel2);
     hLayout2->addLayout(hLayout2_v);
-    hLayout2->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+    hLayout2->addSpacerItem(new QSpacerItem(16777212, 20, QSizePolicy::Maximum, QSizePolicy::Minimum));
     hLayout2->addWidget(button2, Qt::AlignVCenter);
 
     QHBoxLayout *hLayout3 = new QHBoxLayout;
@@ -84,7 +84,7 @@ void YbSettingPage::createWidget()
     hLayout3_v->addSpacing(10);
     hLayout3_v->addWidget(textLabel3);
     hLayout3->addLayout(hLayout3_v);
-    hLayout3->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Maximum, QSizePolicy::Minimum));
+    hLayout3->addSpacerItem(new QSpacerItem(16777212, 20, QSizePolicy::Maximum, QSizePolicy::Minimum));
     hLayout3->addWidget(button3, Qt::AlignVCenter);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;

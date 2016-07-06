@@ -31,6 +31,7 @@ public slots:
 
 signals:
     void transactionClicked(const QModelIndex &index);
+    void setToolBarBalance(const QString &str);
 
 private:
     void createWidget();

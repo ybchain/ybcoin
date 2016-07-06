@@ -113,8 +113,8 @@ void YbSendSignDialog::signMessage()
 
 void YbSendSignDialog::createWidget()
 {
-    this->setFixedHeight(400);
-    this->setFixedWidth(500);
+    setMinimumHeight(400);
+    setMinimumWidth(600);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
@@ -204,8 +204,8 @@ SendSignButtonBar::SendSignButtonBar(QWidget *parent)
     pa.setColor(QPalette::Background,QColor(224, 238, 238));
     this->setPalette(pa);
 
-    setFixedHeight(60);
-    setFixedWidth(500);
+    setMinimumHeight(60);
+    setMinimumWidth(600);
 
     closeButton = new YbPushButton(tr("关闭"), 60, 30, false, this);
     signButton = new YbPushButton(tr("消息签名"), 60, 30, true, this);

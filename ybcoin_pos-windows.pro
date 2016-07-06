@@ -189,11 +189,7 @@ HEADERS += \
     src/distribution.h \
     src/qt/distributedivdialog.h \
 #    src/qt/mainwidget.h \
-    src/qt/titlewidget.h \
-    src/qt/toolwidget.h \
     src/qt/pushbutton.h \
-    src/qt/sysbutton.h \
-    src/qt/toolbutton.h \
     src/qt/stackedwidget.h \
     src/qt/ybsidebarwidget.h \
     src/qt/ybtoolbutton.h \
@@ -216,7 +212,8 @@ HEADERS += \
     src/qt/ybencryptiondialog.h \
     src/qt/ybmainwindow.h \
     src/qt/ybconsole.h \
-    src/qt/receiversform.h
+    src/qt/receiversform.h \
+    src/qt/yblabelbutton.h
 
 SOURCES += src/qt/bitcoin.cpp \
 #    src/qt/bitcoingui.cpp \
@@ -278,11 +275,7 @@ SOURCES += src/qt/bitcoin.cpp \
     src/scanbalance.cpp \
     src/qt/distributedivdialog.cpp \
 #    src/qt/mainwidget.cpp \
-    src/qt/titlewidget.cpp \
-    src/qt/toolwidget.cpp \
     src/qt/pushbutton.cpp \
-    src/qt/sysbutton.cpp \
-    src/qt/toolbutton.cpp \
     src/qt/stackedwidget.cpp \
     src/qt/ybsidebarwidget.cpp \
     src/qt/ybtoolbutton.cpp \
@@ -305,7 +298,8 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/ybencryptiondialog.cpp \
     src/qt/ybmainwindow.cpp \
     src/qt/ybconsole.cpp \
-    src/qt/receiversform.cpp
+    src/qt/receiversform.cpp \
+    src/qt/yblabelbutton.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc

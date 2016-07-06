@@ -27,7 +27,7 @@ YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QStrin
 
     QLabel *pixLabel = new QLabel;
     pixLabel->setPixmap(pixmap);
-    pixLabel->setFixedSize(pixmap.size());
+    pixLabel->setMinimumSize(pixmap.size());
     QHBoxLayout *titleLayout = new QHBoxLayout;
     titleLayout->addSpacing(10);
     titleLayout->addWidget(pixLabel);
@@ -65,7 +65,7 @@ YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QWidge
 
     QLabel *pixLabel = new QLabel;
     pixLabel->setPixmap(pixmap);
-    pixLabel->setFixedSize(pixmap.size());
+    pixLabel->setMinimumSize(pixmap.size());
     QHBoxLayout *titleLayout = new QHBoxLayout;
     titleLayout->addSpacing(10);
     titleLayout->addWidget(pixLabel);

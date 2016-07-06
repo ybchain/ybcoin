@@ -204,6 +204,7 @@ void YbOverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmed
     currentUnconfirmedBalance = unconfirmedBalance;
     balanceValue->setText(BitcoinUnits::formatWithUnit(unit, balance));
     stakeValue->setText(BitcoinUnits::formatWithUnit(unit, stake));
+    emit setToolBarBalance(BitcoinUnits::formatWithUnit(unit, stake));
     unconfirmedValue->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance));
 }
 

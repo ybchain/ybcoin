@@ -15,10 +15,11 @@ class YbToolBarWidget : public QWidget
     Q_OBJECT
 public:
     explicit YbToolBarWidget(QWidget *parent = 0);
-    void setYbcNumber(double number);
-    double getYbcNumber();
     void addPushButton(QPushButton *pushButton);
     void addSpacerItem(QSpacerItem *spacerItem);
+
+public slots:
+    void setYbcNumber(const QString &str);
 
 private:
     QVBoxLayout *wholeLayout;
@@ -31,11 +32,9 @@ private:
     QHBoxLayout *ybcLayout;
     QLabel *myWalletTextLabel;
     QLabel *ybcNumberLabel;
-    QLabel *ybcTextLabel;
     YbSeparater *separater;
 
     QFont boldFont;
-    double ybcNumber;
 };
 
 #endif // YBTOOLBARWIDGET_H

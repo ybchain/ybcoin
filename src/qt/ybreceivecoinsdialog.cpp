@@ -48,8 +48,8 @@ void YbReceiveCoinsDialog::cancel()
 
 void YbReceiveCoinsDialog::createWidget()
 {
-    this->setFixedHeight(300);
-    this->setFixedWidth(500);
+    this->setMinimumHeight(300);
+    this->setMinimumWidth(500);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
@@ -109,8 +109,8 @@ ReceiveCoinsButtonBar::ReceiveCoinsButtonBar(QWidget *parent)
     pa.setColor(QPalette::Background,QColor(224, 238, 238));
     this->setPalette(pa);
 
-    setFixedHeight(60);
-    setFixedWidth(500);
+    setMinimumHeight(60);
+    setMinimumWidth(500);
 
     sendSignButton = new YbPushButton(tr("发送签名消息"), 80, 30, true, this);
     cancelButton = new YbPushButton(tr("取消"), 60, 30, false, this);

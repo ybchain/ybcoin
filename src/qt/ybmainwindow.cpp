@@ -270,6 +270,7 @@ void YbMainWindow::createWidgets()
     sendCoinsDialog = new YbSendCoinsDialog;
     receiveCoinsDialog = new YbReceiveCoinsDialog;
 
+    connect(overviewPage, SIGNAL(setToolBarBalance(QString)), toolBar, SLOT(setYbcNumber(QString)));
     connect(receiveCoinsDialog, SIGNAL(showSendSign(QString)), this, SLOT(showSendSignDialog(QString)));
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page

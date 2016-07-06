@@ -22,45 +22,37 @@ YbToolBarWidget::YbToolBarWidget(QWidget *parent) :
     pushButtonLayout = new QHBoxLayout;
     separater = new YbSeparater;
 
-    this->setFixedHeight(100);
+    this->setMinimumHeight(100);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background, QColor(255, 255, 255));
     this->setPalette(pa);
 
     myWalletTextLabel = new QLabel;
-    myWalletTextLabel->setFixedHeight(30);
+    myWalletTextLabel->setMinimumHeight(30);
     myWalletTextLabel->setMinimumWidth(400);
     myWalletTextLabel->setFont(boldFont);
     myWalletTextLabel->setStyleSheet("font-size:30px;");
     myWalletTextLabel->setText(tr("My wallet"));
 
     ybcNumberLabel = new QLabel;
-    ybcNumberLabel->setFixedHeight(20);
+    ybcNumberLabel->setMinimumHeight(20);
     ybcNumberLabel->setFont(boldFont);
     ybcNumberLabel->setStyleSheet("font-size:20px;");
-    ybcNumber = 0;
-    ybcNumberLabel->setText(QString::number(ybcNumber));
-
-    ybcTextLabel = new QLabel;
-    ybcTextLabel->setFixedHeight(20);
-    ybcTextLabel->setFont(boldFont);
-    ybcTextLabel->setStyleSheet("font-size:20px;");
-    ybcTextLabel->setText("YBC");
+    ybcNumberLabel->setText(tr("0.00YBC"));
 
     leftLayout->addWidget(myWalletTextLabel);
     leftLayout->addSpacing(5);
     leftLayout->addLayout(pushButtonLayout);
-    QSpacerItem *lvSpacerItem = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
-    leftLayout->addSpacerItem(lvSpacerItem);
+//    QSpacerItem *lvSpacerItem = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
+//    leftLayout->addSpacerItem(lvSpacerItem);
 
     ybcLayout->addWidget(ybcNumberLabel);
-    ybcLayout->addWidget(ybcTextLabel);
 
     rightLayout->addSpacing(20);
     rightLayout->addLayout(ybcLayout);
-    QSpacerItem *rvSpacerItem = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
-    rightLayout->addSpacerItem(rvSpacerItem);
+//    QSpacerItem *rvSpacerItem = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
+//    rightLayout->addSpacerItem(rvSpacerItem);
 
     mainLayout->addSpacing(20);
     mainLayout->addLayout(leftLayout);
@@ -79,15 +71,9 @@ YbToolBarWidget::YbToolBarWidget(QWidget *parent) :
     this->setLayout(wholeLayout);
 }
 
-void YbToolBarWidget::setYbcNumber(double number)
+void YbToolBarWidget::setYbcNumber(const QString &str)
 {
-    ybcNumber = number;
-    ybcNumberLabel->setText(QString::number(ybcNumber));
-}
-
-double YbToolBarWidget::getYbcNumber()
-{
-    return ybcNumber;
+    ybcNumberLabel->setText(str);
 }
 
 void YbToolBarWidget::addPushButton(QPushButton *pushButton)

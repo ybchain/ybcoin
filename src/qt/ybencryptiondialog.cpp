@@ -216,8 +216,8 @@ void YbEncryptionDialog::setModel(WalletModel *model)
 
 void YbEncryptionDialog::createWidget()
 {
-    this->setFixedHeight(250);
-    this->setFixedWidth(500);
+    this->setMinimumHeight(250);
+    this->setMinimumWidth(500);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
@@ -283,6 +283,7 @@ void YbEncryptionDialog::createWidget()
     mainLayout->addWidget(title);
     mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding));
     mainLayout->addLayout(warningLayout);
+    mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding));
     mainLayout->addSpacing(10);
     mainLayout->addLayout(hlayout1);
     mainLayout->addLayout(hlayout2);
@@ -365,8 +366,8 @@ EncryptionButtonBar::EncryptionButtonBar(QWidget *parent)
     pa.setColor(QPalette::Background,QColor(224, 238, 238));
     this->setPalette(pa);
 
-    setFixedHeight(60);
-    setFixedWidth(500);
+    setMinimumHeight(60);
+    setMinimumWidth(500);
 
     closeButton = new YbPushButton(tr("取消"), 60, 30, false, this);
     okButton = new YbPushButton(tr("完成"), 60, 30, true, this);

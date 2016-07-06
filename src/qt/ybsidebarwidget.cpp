@@ -10,7 +10,7 @@
 YbSideBarWidget::YbSideBarWidget(QWidget *parent) :
     QWidget(parent)
 {
-    this->setFixedWidth(250);
+    this->setMinimumWidth(250);
     this->setMinimumHeight(500);
     setAutoFillBackground(true);
     QPalette pa = palette();
@@ -20,8 +20,8 @@ YbSideBarWidget::YbSideBarWidget(QWidget *parent) :
     mainLayout->setSpacing(20);
     mainLayout->setMargin(0);
     titleLabel = new QLabel;
-    titleLabel->setFixedHeight(60);
-    titleLabel->setFixedWidth(250);
+    titleLabel->setMinimumHeight(60);
+    titleLabel->setMinimumWidth(250);
     titleLabel->setStyleSheet("background-color:black; font-size:60px; color:white;");
     titleLabel->setAlignment(Qt::AlignHCenter);
     mainLayout->addWidget(titleLabel);
@@ -30,8 +30,8 @@ YbSideBarWidget::YbSideBarWidget(QWidget *parent) :
 
 void YbSideBarWidget::setTitle(const QString &title, const int &height, const int &width)
 {
-    titleLabel->setFixedHeight(height);
-    titleLabel->setFixedWidth(width);
+    titleLabel->setMinimumHeight(height);
+    titleLabel->setMinimumWidth(width);
     titleLabel->setText(title);
 }
 
