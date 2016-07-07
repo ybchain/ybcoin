@@ -10,6 +10,7 @@ YbMessageDialogTitle::YbMessageDialogTitle(QPixmap pixmap, QString title, QStrin
 {
     this->title = new QLabel;
     this->titleInfo = new QLabel;
+    this->titleInfo->setWordWrap(true);
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(224, 238, 238));

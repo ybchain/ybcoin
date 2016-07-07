@@ -33,7 +33,8 @@ void YbSettingPage::createWidget()
     textLabel2 = new QLabel(tr("您的密码不会在我们的服务器上共享，这意味着如果您忘记了密码，我们将\n无法帮助您重置，请记录下您的恢复短语，这将帮助您在丢失密码的情况下\n恢复钱包的访问权限。"));
     textLabel3 = new QLabel(tr("您的YBC钱包绝不会将密码传送到我们的服务器，这意味着我们无法知晓您的\n密码，并且如果您忘记了密码，我们无法为您重置。请创建一个能够牢记的\n口令，我们可在您忘记密码的情况下将其发送到您经过验证的电子邮件地址。"));
     warningLabel = new YbLabel(this);
-    warningLabel->setText(tr("安全提示：确保您的信息正确并处于最新状态，以防止您的钱包遭受未经授权的访问，并在丢失钱包ID或密码的\n情况下帮助您恢复钱包的访问权限。"));
+    warningLabel->setWordWrap(true);
+    warningLabel->setText(tr("安全提示：确保您的信息正确并处于最新状态，以防止您的钱包遭受未经授权的访问，并在丢失钱包ID或密码的情况下帮助您恢复钱包的访问权限。"));
     warningLabel->setLabelType(warning);
     button1 = new YbPushButton(tr("更改"));
     button1->setCheckable(true);

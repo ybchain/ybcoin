@@ -124,7 +124,7 @@ void YbSendSignDialog::createWidget()
     QFont boldFont;
     boldFont.setBold(true);
 
-    QString titleInfoStr(tr("您可以用您的地址对消息进行签名，以证明您是该地址的所有人，注意不要对模棱两可\n的消息签名，以免遭受钓鱼式的攻击。请确保消息真实明确的表达您的意愿。"));
+    QString titleInfoStr(tr("您可以用您的地址对消息进行签名，以证明您是该地址的所有人，注意不要对模棱两可的消息签名，以免遭受钓鱼式的攻击。请确保消息真实明确的表达您的意愿。"));
     QPixmap sendPix(":icons/sendindialog");
     QString titleStr(tr("发送签名消息"));
     title = new YbMessageDialogTitle(sendPix, titleStr, titleInfoStr);
