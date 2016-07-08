@@ -33,6 +33,7 @@ public:
     void setModel(AddressTableModel *model);
     const QString &getReturnValue() const { return returnValue; }
 
+    void hideSignButton();
 public slots:
     void done(int retval);
     void exportClicked();
@@ -43,6 +44,7 @@ signals:
 private:
     void createWidget();
 
+    bool isHideSignButton;
     QTableView *tableView;
     YbPushButton *newAddressButton;
     YbPushButton *copyAddressButton;

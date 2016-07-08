@@ -52,6 +52,9 @@ void YbSendSignDialog::paste()
 void YbSendSignDialog::showAddr()
 {
     YbAddressBookPage dlg(YbAddressBookPage::ForSending, YbAddressBookPage::ReceivingTab, this);
+    dlg.hideSignButton();
+    dlg.setMinimumHeight(300);
+    dlg.setMinimumWidth(500);
     dlg.setModel(model->getAddressTableModel());
     if(dlg.exec())
     {

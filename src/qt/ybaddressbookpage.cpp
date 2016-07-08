@@ -24,6 +24,7 @@ YbAddressBookPage::YbAddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     model(0),
     mode(mode),
     tab(tab),
+    isHideSignButton(false),
     QDialog(parent)
 {
     createWidget();
@@ -58,7 +59,9 @@ YbAddressBookPage::YbAddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         break;
     case ReceivingTab:
         deleteAddressButton->setVisible(false);
-        signMessageButton->setVisible(true);
+        if(!isHideSignButton){
+            signMessageButton->setVisible(true);
+        }
         break;
     }
     tableView->setTabKeyNavigation(false);
@@ -150,6 +153,12 @@ void YbAddressBookPage::setModel(AddressTableModel *model)
             this, SLOT(selectionChanged()));
 
     selectionChanged();
+}
+
+void YbAddressBookPage::hideSignButton()
+{
+    signMessageButton->hide();
+    isHideSignButton = true;
 }
 
 void YbAddressBookPage::done(int retval)
@@ -328,16 +337,20 @@ void YbAddressBookPage::selectionChanged()
             deleteAddressButton->setEnabled(true);
             deleteAddressButton->setVisible(true);
             deleteAction->setEnabled(true);
-            signMessageButton->setEnabled(false);
-            signMessageButton->setVisible(false);
+            if(!isHideSignButton){
+                signMessageButton->setEnabled(false);
+                signMessageButton->setVisible(false);
+            }
             break;
         case ReceivingTab:
             // Deleting receiving addresses, however, is not allowed
             deleteAddressButton->setEnabled(false);
             deleteAddressButton->setVisible(false);
             deleteAction->setEnabled(false);
-            signMessageButton->setEnabled(true);
-            signMessageButton->setVisible(true);
+            if(!isHideSignButton){
+                signMessageButton->setEnabled(true);
+                signMessageButton->setVisible(true);
+            }
             break;
         }
         copyAddressButton->setEnabled(true);
@@ -348,7 +361,9 @@ void YbAddressBookPage::selectionChanged()
         deleteAddressButton->setEnabled(false);
         showQRCodeButton->setEnabled(false);
         copyAddressButton->setEnabled(false);
-        signMessageButton->setEnabled(false);
+        if(!isHideSignButton){
+            signMessageButton->setEnabled(false);
+        }
     }
 }
 
