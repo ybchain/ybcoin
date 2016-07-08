@@ -1,7 +1,7 @@
 #ifndef YBSENDSIGNDIALOG_H
 #define YBSENDSIGNDIALOG_H
 
-#include <QWidget>
+#include <QDialog>
 
 class WalletModel;
 class YbMessageDialogTitle;
@@ -28,7 +28,7 @@ private:
     YbPushButton *signButton;
 };
 
-class YbSendSignDialog : public QWidget
+class YbSendSignDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -52,7 +52,7 @@ private:
     YbMessageDialogTitle *title;
     YbPushButton *pasteButton;
     YbPushButton *addrButton;
-    YbPushButton *addrSignButton;
+    YbPushButton *copySignButton;
     QValidatedLineEdit *signFrom;
     QLineEdit *signature;
     QPlainTextEdit *message;

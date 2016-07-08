@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QList>
+#include <QDialog>
 
 class WalletModel;
 class SendCoinsRecipient;
@@ -45,7 +46,7 @@ private:
     bool fNewRecipientAllowed;
 };
 
-class YbSendCoinsDialog : public QWidget
+class YbSendCoinsDialog : public QDialog
 {
     Q_OBJECT
 public:

@@ -10,6 +10,11 @@ EditAddressDialog::EditAddressDialog(Mode mode, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::EditAddressDialog), mapper(0), mode(mode), model(0)
 {
+    setAutoFillBackground(true);
+    QPalette pa = palette();
+    pa.setColor(QPalette::Background,QColor(255, 255, 255));
+    this->setPalette(pa);
+    setStyleSheet("QLineEdit{border: 2px groove rgb(211, 211, 211)}");
     ui->setupUi(this);
 
     GUIUtil::setupAddressWidget(ui->addressEdit, this);
@@ -18,7 +23,7 @@ EditAddressDialog::EditAddressDialog(Mode mode, QWidget *parent) :
     {
     case NewReceivingAddress:
         setWindowTitle(tr("New receiving address"));
-        ui->addressEdit->setEnabled(false);
+        ui->addressEdit->setReadOnly(true);
         break;
     case NewSendingAddress:
         setWindowTitle(tr("New sending address"));

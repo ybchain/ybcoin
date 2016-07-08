@@ -27,7 +27,7 @@
 #include <QClipboard>
 
 YbSendSignDialog::YbSendSignDialog(QWidget *parent) :
-    QWidget(parent)
+    QDialog(parent)
 {
     createWidget();
     GUIUtil::setupAddressWidget(signFrom, this);
@@ -131,15 +131,18 @@ void YbSendSignDialog::createWidget()
 
     QPixmap pastePix(":icons/paste");
     pasteButton = new YbPushButton(pastePix);
+    pasteButton->setToolTip(tr("从剪贴板粘贴地址"));
     connect(pasteButton, SIGNAL(clicked()), this, SLOT(paste()));
 
     QPixmap addrPix(":icons/addr");
     addrButton = new YbPushButton(addrPix);
+    addrButton->setToolTip(tr("从地址簿选择地址"));
     connect(addrButton, SIGNAL(clicked()), this, SLOT(showAddr()));
 
     QPixmap signPix(":icons/copysign");
-    addrSignButton = new YbPushButton(signPix);
-    connect(addrSignButton, SIGNAL(clicked()), this, SLOT(copyToClipboard()));
+    copySignButton = new YbPushButton(signPix);
+    copySignButton->setToolTip(tr("复制签名到剪贴板"));
+    connect(copySignButton, SIGNAL(clicked()), this, SLOT(copyToClipboard()));
 
     signFrom = new QValidatedLineEdit(this);
     signature = new QLineEdit;
@@ -176,7 +179,7 @@ void YbSendSignDialog::createWidget()
     hlayout3->addSpacing(25);
     hlayout3->addWidget(addrSignText);
     hlayout3->addWidget(signature);
-    hlayout3->addWidget(addrSignButton);
+    hlayout3->addWidget(copySignButton);
     hlayout3->addSpacing(25);
 
     buttonBar = new SendSignButtonBar(this);
@@ -213,8 +216,8 @@ SendSignButtonBar::SendSignButtonBar(QWidget *parent)
     connect(signButton, SIGNAL(clicked()), this, SIGNAL(sign()));
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
-    mainLayout->addWidget(closeButton);
     mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+    mainLayout->addWidget(closeButton);
     mainLayout->addWidget(signButton);
 
     setLayout(mainLayout);

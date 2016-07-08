@@ -149,7 +149,7 @@ void YbMainWindow::setWalletModel(WalletModel *walletModel)
         transactionView->setModel(walletModel);
 
         overviewPage->setModel(walletModel);
-        addressPage->setModel(walletModel->getAddressTableModel());
+        receiveCoinsPage->setModel(walletModel->getAddressTableModel());
         //receiveCoinsDialog->setModel(walletModel->getAddressTableModel());
         sendCoinsDialog->setModel(walletModel);
         messagePage->setModel(walletModel);
@@ -256,29 +256,28 @@ void YbMainWindow::createWidgets()
     hbox->addWidget(transactionView);
     hbox->addSpacing(20);
     historyPage->setLayout(hbox);
-    addressPage = new YbAddressBookPage(YbAddressBookPage::ForEditing, YbAddressBookPage::SendingTab, this);
+    receiveCoinsPage = new YbAddressBookPage(YbAddressBookPage::ForEditing, YbAddressBookPage::ReceivingTab);
     settingPage = new YbSettingPage(this);
     helpPage = new YbHelpPage(this);
     stackedWidget->addWidget(overviewPage);
     stackedWidget->addWidget(historyPage);
-    stackedWidget->addWidget(addressPage);
+    stackedWidget->addWidget(receiveCoinsPage);
     stackedWidget->addWidget(settingPage);
     stackedWidget->addWidget(helpPage);
     rightLayout->addWidget(stackedWidget);
 
-    messagePage = new YbSendSignDialog;
-    sendCoinsDialog = new YbSendCoinsDialog;
+    messagePage = new YbSendSignDialog(this);
+    sendCoinsDialog = new YbSendCoinsDialog(this);
     receiveCoinsDialog = new YbReceiveCoinsDialog;
 
     connect(overviewPage, SIGNAL(setToolBarBalance(QString)), toolBar, SLOT(setYbcNumber(QString)));
     connect(receiveCoinsDialog, SIGNAL(showSendSign(QString)), this, SLOT(showSendSignDialog(QString)));
+    connect(receiveCoinsPage, SIGNAL(showSignDialog(QString)), this, SLOT(showSendSignDialog(QString)));
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));
     // Doubleclicking on a transaction on the transaction history page shows details
     connect(transactionView, SIGNAL(doubleClicked(QModelIndex)), transactionView, SLOT(showDetails()));
-
-    connect(addressPage, SIGNAL(showSignDialog(QString)), this, SLOT(showSendSignDialog(QString)));
 
     connect(settingPage, SIGNAL(button1Clicked(bool)), this, SLOT(encryptWallet(bool)));
     connect(settingPage, SIGNAL(button2Clicked(bool)), this, SLOT(unlockForMinting(bool)));
@@ -327,6 +326,7 @@ void YbMainWindow::createButton()
 
     QPixmap receivePix(":icons/receive");
     receivePushButton = new YbPushButton(receivePix, tr("Receive"), this);
+    receivePushButton->hide();
 
     QPixmap exportPix(":icons/grayexport");
     exportPushButton = new YbPushButton(exportPix, tr("Export"), this);
@@ -336,7 +336,7 @@ void YbMainWindow::createButton()
     connect(historyButton, SIGNAL(toolClicked()), this, SLOT(showNormalIfMinimized()));
     connect(historyButton, SIGNAL(toolClicked()), this, SLOT(gotoHistoryPage()));
     connect(addressBookButton, SIGNAL(toolClicked()), this, SLOT(showNormalIfMinimized()));
-    connect(addressBookButton, SIGNAL(toolClicked()), this, SLOT(gotoAddressBookPage()));
+    connect(addressBookButton, SIGNAL(toolClicked()), this, SLOT(gotoReceiveCoinsPage()));
     connect(settingButton, SIGNAL(toolClicked()), this, SLOT(showNormalIfMinimized()));
     connect(settingButton, SIGNAL(toolClicked()), this, SLOT(gotoSettingPage()));
     connect(helpButton, SIGNAL(toolClicked()), this, SLOT(showNormalIfMinimized()));
@@ -747,15 +747,16 @@ void YbMainWindow::gotoHistoryPage()
     connect(exportPushButton, SIGNAL(clicked()), transactionView, SLOT(exportClicked()));
 }
 
-void YbMainWindow::gotoAddressBookPage()
+void YbMainWindow::gotoReceiveCoinsPage()
 {
-    stackedWidget->setCurrentWidget(addressPage);
+    receiveCoinsAction->setChecked(true);
+    stackedWidget->setCurrentWidget(receiveCoinsPage);
     exportPushButton->setEnabled(true);
     exportAction->setEnabled(true);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-    connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
     disconnect(exportPushButton, SIGNAL(clicked()), 0, 0);
-    connect(exportPushButton, SIGNAL(clicked()), addressPage, SLOT(exportClicked()));
+    connect(exportPushButton, SIGNAL(clicked()), receiveCoinsPage, SLOT(exportClicked()));
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+    connect(exportAction, SIGNAL(triggered()), receiveCoinsPage, SLOT(exportClicked()));
 }
 
 void YbMainWindow::gotoSettingPage()

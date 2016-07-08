@@ -19,7 +19,7 @@
 #include <QScrollArea>
 
 YbSendCoinsDialog::YbSendCoinsDialog(QWidget *parent) :
-    addAsLabel(new QValidatedLineEdit(this)), buttonBar(new SendCoinsButtonBar), QWidget(parent)
+    addAsLabel(new QValidatedLineEdit(this)), buttonBar(new SendCoinsButtonBar), QDialog(parent)
 {
     createWidget();
 

@@ -64,6 +64,7 @@
         <file alias="addsend">res/icons/增加-icon.png</file>
         <file alias="send">res/icons/send.png</file>
         <file alias="paste">res/icons/复制icon.png</file>
+        <file alias="addr">res/icons/地址簿icon.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

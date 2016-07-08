@@ -72,6 +72,7 @@ private:
     QWidget *historyPage;
     TransactionView *transactionView;
     YbAddressBookPage *addressPage;
+    YbAddressBookPage *receiveCoinsPage;
     YbSettingPage *settingPage;
     YbHelpPage *helpPage;
     YbSendSignDialog *messagePage;
@@ -162,8 +163,8 @@ private slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
-    /** Switch to address book page */
-    void gotoAddressBookPage();
+    /** Switch to receive shares page */
+    void gotoReceiveCoinsPage();
     /** Switch to receive shares page */
     void gotoSettingPage();
     /** Switch to send shares page */

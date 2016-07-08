@@ -205,6 +205,10 @@ void YbAddressBookPage::exportClicked()
 
 void YbAddressBookPage::createWidget()
 {
+    setAutoFillBackground(true);
+    QPalette pa = palette();
+    pa.setColor(QPalette::Background,QColor(255, 255, 255));
+    this->setPalette(pa);
     setStyleSheet("QTableView{border: 2px groove rgb(211, 211, 211)}");
     QPixmap addPix(":icons/add");
     QPixmap copyPix(":icons/copy");
@@ -233,7 +237,13 @@ void YbAddressBookPage::createWidget()
     hlayout->addWidget(showQRCodeButton);
     hlayout->addWidget(signMessageButton);
     hlayout->addSpacing(20);
-    tableView = new QTableView(this);
+    tableView = new QTableView;
+    tableView->setAlternatingRowColors(true);
+    tableView->setSelectionMode(QAbstractItemView::SingleSelection);
+    tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    tableView->setSortingEnabled(true);
+    tableView->horizontalHeader()->setSortIndicator(0, Qt::AscendingOrder);
+    tableView->verticalHeader()->setVisible(false);
     QHBoxLayout *viewhLayout = new QHBoxLayout;
     viewhLayout->addSpacing(20);
     viewhLayout->addWidget(tableView);
