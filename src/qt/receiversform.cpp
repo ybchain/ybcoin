@@ -184,8 +184,6 @@ void Receiver::createWidget()
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
     this->setPalette(pa);
 
-    boldFont.setBold(true);
-
     setStyleSheet("QLineEdit{border: 2px groove rgb(211, 211, 211)} QDoubleSpinBox{border: 2px groove rgb(211, 211, 211);} QComboBox{border: 2px groove rgb(211, 211, 211);}");
 
     payTo->setToolTip(tr("输入地址"));
@@ -208,8 +206,7 @@ void Receiver::createWidget()
     addLayout->addSpacing(10);
     connect(addButton, SIGNAL(labelButtonClicked()), this, SIGNAL(addReceiver()));
 
-    QLabel *receiverLabel = new QLabel(tr("接收者："));
-    receiverLabel->setFont(boldFont);
+    QLabel *receiverLabel = new QLabel(tr("receiver:"));
 
     QHBoxLayout *payToLayout = new QHBoxLayout;
     payToLayout->addSpacing(20);
@@ -222,8 +219,7 @@ void Receiver::createWidget()
     payAmount->setMinimumWidth(370);
     QHBoxLayout *moneyLayout = new QHBoxLayout;
     //moneyLayout->addSpacing();
-    QLabel *moneyText = new QLabel(tr("金额："));
-    moneyText->setFont(boldFont);
+    QLabel *moneyText = new QLabel(tr("money:"));
     moneyLayout->addSpacing(20);
     moneyLayout->addWidget(moneyText);
     moneyLayout->addSpacing(12);

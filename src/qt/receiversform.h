@@ -67,7 +67,6 @@ signals:
 private:
     void createWidget();
 
-    QFont boldFont;
     bool isDrawBorder;
     YbLabelButton *closeButton;
     YbLabelButton *addButton;

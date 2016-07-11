@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
@@ -39,75 +40,75 @@ This product includes software developed by the OpenSSL Project for use in the O
     <name>AddressBookPage</name>
     <message>
         <source>Address Book</source>
-        <translation type="vanished">Carnet d&apos;adresses</translation>
+        <translation type="obsolete">Carnet d&apos;adresses</translation>
     </message>
     <message>
         <source>Double-click to edit address or label</source>
-        <translation type="vanished">Double cliquez afin de modifier l&apos;adresse ou l&apos;étiquette</translation>
+        <translation type="obsolete">Double cliquez afin de modifier l&apos;adresse ou l&apos;étiquette</translation>
     </message>
     <message>
         <source>Create a new address</source>
-        <translation type="vanished">Créer une nouvelle adresse</translation>
+        <translation type="obsolete">Créer une nouvelle adresse</translation>
     </message>
     <message>
         <source>&amp;New Address...</source>
-        <translation type="vanished">&amp;Nouvelle Adresse...</translation>
+        <translation type="obsolete">&amp;Nouvelle Adresse...</translation>
     </message>
     <message>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation type="vanished">Copier l&apos;adresse surlignée dans votre presse-papiers</translation>
+        <translation type="obsolete">Copier l&apos;adresse surlignée dans votre presse-papiers</translation>
     </message>
     <message>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="vanished">&amp;Copier dans le presse-papiers</translation>
+        <translation type="obsolete">&amp;Copier dans le presse-papiers</translation>
     </message>
     <message>
         <source>Show &amp;QR Code</source>
-        <translation type="vanished">Afficher le &amp;QR Code</translation>
+        <translation type="obsolete">Afficher le &amp;QR Code</translation>
     </message>
     <message>
         <source>&amp;Sign Message</source>
-        <translation type="vanished">&amp;Signer un message</translation>
+        <translation type="obsolete">&amp;Signer un message</translation>
     </message>
     <message>
         <source>Delete the currently selected address from the list. Only sending addresses can be deleted.</source>
-        <translation type="vanished">Supprimer l&apos;adresse sélectionnée dans la liste. Seules les adresses d&apos;envoi peuvent être supprimées.</translation>
+        <translation type="obsolete">Supprimer l&apos;adresse sélectionnée dans la liste. Seules les adresses d&apos;envoi peuvent être supprimées.</translation>
     </message>
     <message>
         <source>&amp;Delete</source>
-        <translation type="vanished">&amp;Supprimer</translation>
+        <translation type="obsolete">&amp;Supprimer</translation>
     </message>
     <message>
         <source>Copy address</source>
-        <translation type="vanished">Copier l&apos;adresse</translation>
+        <translation type="obsolete">Copier l&apos;adresse</translation>
     </message>
     <message>
         <source>Copy label</source>
-        <translation type="vanished">Copier l&apos;étiquette</translation>
+        <translation type="obsolete">Copier l&apos;étiquette</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="vanished">Éditer</translation>
+        <translation type="obsolete">Éditer</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="vanished">Effacer</translation>
+        <translation type="obsolete">Effacer</translation>
     </message>
     <message>
         <source>Export Address Book Data</source>
-        <translation type="vanished">Exporter les données du carnet d&apos;adresses</translation>
+        <translation type="obsolete">Exporter les données du carnet d&apos;adresses</translation>
     </message>
     <message>
         <source>Comma separated file (*.csv)</source>
-        <translation type="vanished">Valeurs séparées par des virgules (*.csv)</translation>
+        <translation type="obsolete">Valeurs séparées par des virgules (*.csv)</translation>
     </message>
     <message>
         <source>Error exporting</source>
-        <translation type="vanished">Erreur lors de l&apos;exportation</translation>
+        <translation type="obsolete">Erreur lors de l&apos;exportation</translation>
     </message>
     <message>
         <source>Could not write to file %1.</source>
-        <translation type="vanished">Impossible d&apos;écrire sur le fichier %1.</translation>
+        <translation type="obsolete">Impossible d&apos;écrire sur le fichier %1.</translation>
     </message>
 </context>
 <context>
@@ -624,42 +625,42 @@ Adresse : %4
         <translation>L&apos;adresse associée avec cette entrée du carnet d&apos;adresses. Ne peut être modifiée que pour les adresses d&apos;envoi.</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="20"/>
+        <location filename="../editaddressdialog.cpp" line="25"/>
         <source>New receiving address</source>
         <translation>Nouvelle adresse de réception</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="24"/>
+        <location filename="../editaddressdialog.cpp" line="29"/>
         <source>New sending address</source>
         <translation>Nouvelle adresse d&apos;envoi</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="27"/>
+        <location filename="../editaddressdialog.cpp" line="32"/>
         <source>Edit receiving address</source>
         <translation>Éditer l&apos;adresse de réception</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="31"/>
+        <location filename="../editaddressdialog.cpp" line="36"/>
         <source>Edit sending address</source>
         <translation>Éditer l&apos;adresse d&apos;envoi</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="91"/>
+        <location filename="../editaddressdialog.cpp" line="96"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>L&apos;adresse fournie « %1 » est déjà présente dans le carnet d&apos;adresses.</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="96"/>
+        <location filename="../editaddressdialog.cpp" line="101"/>
         <source>The entered address &quot;%1&quot; is not a valid bitcoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="101"/>
+        <location filename="../editaddressdialog.cpp" line="106"/>
         <source>Could not unlock wallet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="106"/>
+        <location filename="../editaddressdialog.cpp" line="111"/>
         <source>New key generation failed.</source>
         <translation>Échec de la génération de la nouvelle clef.</translation>
     </message>
@@ -667,12 +668,12 @@ Adresse : %4
 <context>
     <name>EncryptionButtonBar</name>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="356"/>
-        <source>关闭</source>
+        <location filename="../ybencryptiondialog.cpp" line="372"/>
+        <source>取消</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="357"/>
+        <location filename="../ybencryptiondialog.cpp" line="373"/>
         <source>完成</source>
         <translation type="unfinished"></translation>
     </message>
@@ -953,55 +954,55 @@ Adresse : %4
     <name>MessagePage</name>
     <message>
         <source>Message</source>
-        <translation type="vanished">Message</translation>
+        <translation type="obsolete">Message</translation>
     </message>
     <message>
         <source>Choose adress from address book</source>
-        <translation type="vanished">Choisir une adresse depuis le carnet d&apos;adresses</translation>
+        <translation type="obsolete">Choisir une adresse depuis le carnet d&apos;adresses</translation>
     </message>
     <message>
         <source>Alt+A</source>
-        <translation type="vanished">Alt+A</translation>
+        <translation type="obsolete">Alt+A</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
-        <translation type="vanished">Coller une adresse depuis le presse-papiers</translation>
+        <translation type="obsolete">Coller une adresse depuis le presse-papiers</translation>
     </message>
     <message>
         <source>Alt+P</source>
-        <translation type="vanished">Alt+P</translation>
+        <translation type="obsolete">Alt+P</translation>
     </message>
     <message>
         <source>Enter the message you want to sign here</source>
-        <translation type="vanished">Entrez ici le message que vous désirez signer</translation>
+        <translation type="obsolete">Entrez ici le message que vous désirez signer</translation>
     </message>
     <message>
         <source>Click &quot;Sign Message&quot; to get signature</source>
-        <translation type="vanished">Cliquez sur « Signer le message » pour obtenir la signature</translation>
+        <translation type="obsolete">Cliquez sur « Signer le message » pour obtenir la signature</translation>
     </message>
     <message>
         <source>&amp;Sign Message</source>
-        <translation type="vanished">&amp;Signer le message</translation>
+        <translation type="obsolete">&amp;Signer le message</translation>
     </message>
     <message>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="vanished">&amp;Copier dans le presse-papiers</translation>
+        <translation type="obsolete">&amp;Copier dans le presse-papiers</translation>
     </message>
     <message>
         <source>Error signing</source>
-        <translation type="vanished">Une erreur est survenue lors de la signature</translation>
+        <translation type="obsolete">Une erreur est survenue lors de la signature</translation>
     </message>
     <message>
         <source>%1 is not a valid address.</source>
-        <translation type="vanished">%1 n&apos;est pas une adresse valide.</translation>
+        <translation type="obsolete">%1 n&apos;est pas une adresse valide.</translation>
     </message>
     <message>
         <source>Private key for %1 is not available.</source>
-        <translation type="vanished">La clef privée pour %1 n&apos;est pas disponible.</translation>
+        <translation type="obsolete">La clef privée pour %1 n&apos;est pas disponible.</translation>
     </message>
     <message>
         <source>Sign failed</source>
-        <translation type="vanished">Échec de la signature</translation>
+        <translation type="obsolete">Échec de la signature</translation>
     </message>
 </context>
 <context>
@@ -1026,35 +1027,35 @@ Adresse : %4
     <name>OverviewPage</name>
     <message>
         <source>Form</source>
-        <translation type="vanished">Formulaire</translation>
+        <translation type="obsolete">Formulaire</translation>
     </message>
     <message>
         <source>Balance:</source>
-        <translation type="vanished">Solde :</translation>
+        <translation type="obsolete">Solde :</translation>
     </message>
     <message>
         <source>Number of transactions:</source>
-        <translation type="vanished">Nombre de transactions :</translation>
+        <translation type="obsolete">Nombre de transactions :</translation>
     </message>
     <message>
         <source>0</source>
-        <translation type="vanished">0</translation>
+        <translation type="obsolete">0</translation>
     </message>
     <message>
         <source>Unconfirmed:</source>
-        <translation type="vanished">Non confirmé :</translation>
+        <translation type="obsolete">Non confirmé :</translation>
     </message>
     <message>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation type="vanished">&lt;b&gt;Transactions récentes&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Transactions récentes&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Your current balance</source>
-        <translation type="vanished">Votre solde actuel</translation>
+        <translation type="obsolete">Votre solde actuel</translation>
     </message>
     <message>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation type="vanished">Total des transactions qui doivent encore être confirmées et qui ne sont pas pris en compte pour le solde actuel</translation>
+        <translation type="obsolete">Total des transactions qui doivent encore être confirmées et qui ne sont pas pris en compte pour le solde actuel</translation>
     </message>
 </context>
 <context>
@@ -1141,19 +1142,19 @@ Adresse : %4
 <context>
     <name>Receiver</name>
     <message>
-        <location filename="../receiversform.cpp" line="36"/>
-        <location filename="../receiversform.cpp" line="189"/>
+        <location filename="../receiversform.cpp" line="38"/>
+        <location filename="../receiversform.cpp" line="191"/>
         <source>输入地址</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="209"/>
-        <source>接收者：</source>
+        <location filename="../receiversform.cpp" line="211"/>
+        <source>receiver:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="223"/>
-        <source>金额：</source>
+        <location filename="../receiversform.cpp" line="225"/>
+        <source>money:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1165,69 +1166,69 @@ Adresse : %4
         <translation type="unfinished">Formulaire</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="384"/>
         <location filename="../receiversform.cpp" line="386"/>
+        <location filename="../receiversform.cpp" line="388"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation type="unfinished">&lt;b&gt;%1&lt;/b&gt; à %2 (%3)</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="392"/>
+        <location filename="../receiversform.cpp" line="394"/>
         <source>Confirm send shares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="393"/>
+        <location filename="../receiversform.cpp" line="395"/>
         <source>Are you sure you want to send %1?</source>
         <translation type="unfinished">Êtes-vous sûr de vouloir envoyer %1 ?</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="393"/>
+        <location filename="../receiversform.cpp" line="395"/>
         <source> and </source>
         <translation type="unfinished"> et </translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="415"/>
-        <location filename="../receiversform.cpp" line="420"/>
-        <location filename="../receiversform.cpp" line="425"/>
-        <location filename="../receiversform.cpp" line="430"/>
-        <location filename="../receiversform.cpp" line="436"/>
-        <location filename="../receiversform.cpp" line="441"/>
-        <location filename="../receiversform.cpp" line="446"/>
+        <location filename="../receiversform.cpp" line="417"/>
+        <location filename="../receiversform.cpp" line="422"/>
+        <location filename="../receiversform.cpp" line="427"/>
+        <location filename="../receiversform.cpp" line="432"/>
+        <location filename="../receiversform.cpp" line="438"/>
+        <location filename="../receiversform.cpp" line="443"/>
+        <location filename="../receiversform.cpp" line="448"/>
         <source>Send Shares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="416"/>
+        <location filename="../receiversform.cpp" line="418"/>
         <source>The recepient address is not valid, please recheck.</source>
         <translation type="unfinished">L&apos;adresse du destinataire n&apos;est pas valide, veuillez la vérifier.</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="421"/>
+        <location filename="../receiversform.cpp" line="423"/>
         <source>The amount to pay must be at least one cent (0.01).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="426"/>
+        <location filename="../receiversform.cpp" line="428"/>
         <source>Amount exceeds your balance</source>
         <translation type="unfinished">Le montant dépasse votre solde</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="431"/>
+        <location filename="../receiversform.cpp" line="433"/>
         <source>Total exceeds your balance when the %1 transaction fee is included</source>
         <translation type="unfinished">Le total dépasse votre solde lorsque les frais de transaction de %1 sont inclus</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="437"/>
+        <location filename="../receiversform.cpp" line="439"/>
         <source>Duplicate address found, can only send to each address once in one send operation</source>
         <translation type="unfinished">Adresse dupliquée trouvée, un seul envoi par adresse est possible à chaque opération d&apos;envoi</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="442"/>
+        <location filename="../receiversform.cpp" line="444"/>
         <source>Error: Transaction creation failed  </source>
         <translation type="unfinished">Erreur : échec de la création de la transaction  </translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="447"/>
+        <location filename="../receiversform.cpp" line="449"/>
         <source>Error: The transaction was rejected.  This might happen if some of the shares in your portfolio were already spent, such as if you used a copy of wallet.dat and shares were spent in the copy but not marked as spent here.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1269,225 +1270,146 @@ Adresse : %4
     <name>SendCoinsDialog</name>
     <message>
         <source>Send to multiple recipients at once</source>
-        <translation type="vanished">Envoyer des pièces à plusieurs destinataires à la fois</translation>
+        <translation type="obsolete">Envoyer des pièces à plusieurs destinataires à la fois</translation>
     </message>
     <message>
         <source>&amp;Add recipient...</source>
-        <translation type="vanished">&amp;Ajouter un destinataire...</translation>
+        <translation type="obsolete">&amp;Ajouter un destinataire...</translation>
     </message>
     <message>
         <source>Remove all transaction fields</source>
-        <translation type="vanished">Enlever tous les champs de transaction</translation>
+        <translation type="obsolete">Enlever tous les champs de transaction</translation>
     </message>
     <message>
         <source>Clear all</source>
-        <translation type="vanished">Tout effacer</translation>
+        <translation type="obsolete">Tout effacer</translation>
     </message>
     <message>
         <source>Balance:</source>
-        <translation type="vanished">Solde :</translation>
+        <translation type="obsolete">Solde :</translation>
     </message>
     <message>
         <source>123.456 BTC</source>
-        <translation type="vanished">123.456 BTC</translation>
+        <translation type="obsolete">123.456 BTC</translation>
     </message>
     <message>
         <source>Confirm the send action</source>
-        <translation type="vanished">Confirmez l&apos;action d&apos;envoi</translation>
+        <translation type="obsolete">Confirmez l&apos;action d&apos;envoi</translation>
     </message>
     <message>
         <source>&amp;Send</source>
-        <translation type="vanished">&amp;Envoyer</translation>
+        <translation type="obsolete">&amp;Envoyer</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
-        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; à %2 (%3)</translation>
+        <translation type="obsolete">&lt;b&gt;%1&lt;/b&gt; à %2 (%3)</translation>
     </message>
     <message>
         <source>Are you sure you want to send %1?</source>
-        <translation type="vanished">Êtes-vous sûr de vouloir envoyer %1 ?</translation>
+        <translation type="obsolete">Êtes-vous sûr de vouloir envoyer %1 ?</translation>
     </message>
     <message>
         <source> and </source>
-        <translation type="vanished"> et </translation>
+        <translation type="obsolete"> et </translation>
     </message>
     <message>
         <source>The recepient address is not valid, please recheck.</source>
-        <translation type="vanished">L&apos;adresse du destinataire n&apos;est pas valide, veuillez la vérifier.</translation>
+        <translation type="obsolete">L&apos;adresse du destinataire n&apos;est pas valide, veuillez la vérifier.</translation>
     </message>
     <message>
         <source>Amount exceeds your balance</source>
-        <translation type="vanished">Le montant dépasse votre solde</translation>
+        <translation type="obsolete">Le montant dépasse votre solde</translation>
     </message>
     <message>
         <source>Total exceeds your balance when the %1 transaction fee is included</source>
-        <translation type="vanished">Le total dépasse votre solde lorsque les frais de transaction de %1 sont inclus</translation>
+        <translation type="obsolete">Le total dépasse votre solde lorsque les frais de transaction de %1 sont inclus</translation>
     </message>
     <message>
         <source>Duplicate address found, can only send to each address once in one send operation</source>
-        <translation type="vanished">Adresse dupliquée trouvée, un seul envoi par adresse est possible à chaque opération d&apos;envoi</translation>
+        <translation type="obsolete">Adresse dupliquée trouvée, un seul envoi par adresse est possible à chaque opération d&apos;envoi</translation>
     </message>
     <message>
         <source>Error: Transaction creation failed  </source>
-        <translation type="vanished">Erreur : échec de la création de la transaction  </translation>
+        <translation type="obsolete">Erreur : échec de la création de la transaction  </translation>
     </message>
 </context>
 <context>
     <name>SendCoinsEntry</name>
     <message>
         <source>Form</source>
-        <translation type="vanished">Formulaire</translation>
+        <translation type="obsolete">Formulaire</translation>
     </message>
     <message>
         <source>A&amp;mount:</source>
-        <translation type="vanished">&amp;Montant :</translation>
+        <translation type="obsolete">&amp;Montant :</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation type="vanished">Entrez une étiquette pour cette adresse afin de l&apos;ajouter à votre carnet d&apos;adresses</translation>
+        <translation type="obsolete">Entrez une étiquette pour cette adresse afin de l&apos;ajouter à votre carnet d&apos;adresses</translation>
     </message>
     <message>
         <source>&amp;Label:</source>
-        <translation type="vanished">&amp;Étiquette :</translation>
+        <translation type="obsolete">&amp;Étiquette :</translation>
     </message>
     <message>
         <source>Choose address from address book</source>
-        <translation type="vanished">Choisir une adresse dans le carnet d&apos;adresses </translation>
+        <translation type="obsolete">Choisir une adresse dans le carnet d&apos;adresses </translation>
     </message>
     <message>
         <source>Alt+A</source>
-        <translation type="vanished">Alt+A</translation>
+        <translation type="obsolete">Alt+A</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
-        <translation type="vanished">Coller une adresse depuis le presse-papiers</translation>
+        <translation type="obsolete">Coller une adresse depuis le presse-papiers</translation>
     </message>
     <message>
         <source>Alt+P</source>
-        <translation type="vanished">Alt+P</translation>
+        <translation type="obsolete">Alt+P</translation>
     </message>
     <message>
         <source>Remove this recipient</source>
-        <translation type="vanished">Enlever ce destinataire</translation>
+        <translation type="obsolete">Enlever ce destinataire</translation>
     </message>
 </context>
 <context>
     <name>SendSignButtonBar</name>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="210"/>
+        <location filename="../ybsendsigndialog.cpp" line="216"/>
         <source>关闭</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="211"/>
+        <location filename="../ybsendsigndialog.cpp" line="217"/>
         <source>消息签名</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TitleWidget</name>
-    <message>
-        <location filename="../titlewidget.cpp" line="16"/>
-        <source>ybcoin Portfolio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../titlewidget.cpp" line="41"/>
-        <source>Skin peeler</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../titlewidget.cpp" line="42"/>
-        <source>Main menu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../titlewidget.cpp" line="43"/>
-        <source>Minimize</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../titlewidget.cpp" line="44"/>
-        <source>Maximize</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../titlewidget.cpp" line="45"/>
-        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ToolWidget</name>
     <message>
-        <location filename="../toolwidget.cpp" line="25"/>
-        <source>Overview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="26"/>
-        <source>Show general overview of holdings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="32"/>
-        <source>Send shares</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="33"/>
-        <source>Send shares to a ybcoin address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="38"/>
-        <source>Receive shares</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="39"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation type="unfinished">Affiche la liste des adresses pour recevoir des paiements</translation>
+        <translation type="obsolete">Affiche la liste des adresses pour recevoir des paiements</translation>
     </message>
     <message>
-        <location filename="../toolwidget.cpp" line="44"/>
-        <source>Transactions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="45"/>
         <source>Browse transaction history</source>
-        <translation type="unfinished">Permet de parcourir l&apos;historique des transactions</translation>
+        <translation type="obsolete">Permet de parcourir l&apos;historique des transactions</translation>
     </message>
     <message>
-        <location filename="../toolwidget.cpp" line="50"/>
         <source>Address Book</source>
-        <translation type="unfinished">Carnet d&apos;adresses</translation>
+        <translation type="obsolete">Carnet d&apos;adresses</translation>
     </message>
     <message>
-        <location filename="../toolwidget.cpp" line="51"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation type="unfinished">Éditer la liste des adresses et des étiquettes stockées</translation>
+        <translation type="obsolete">Éditer la liste des adresses et des étiquettes stockées</translation>
     </message>
     <message>
-        <location filename="../toolwidget.cpp" line="56"/>
-        <source>Sign message</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="57"/>
         <source>Prove you control an address</source>
-        <translation type="unfinished">Prouver que vous contrôlez une adresse</translation>
+        <translation type="obsolete">Prouver que vous contrôlez une adresse</translation>
     </message>
     <message>
-        <location filename="../toolwidget.cpp" line="63"/>
-        <source>Export...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../toolwidget.cpp" line="64"/>
         <source>Export the data in the current tab to a file</source>
-        <translation type="unfinished">Exporter les données de l&apos;onglet courant vers un fichier</translation>
+        <translation type="obsolete">Exporter les données de l&apos;onglet courant vers un fichier</translation>
     </message>
 </context>
 <context>
@@ -1781,168 +1703,168 @@ Adresse : %4
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="55"/>
-        <location filename="../transactionview.cpp" line="71"/>
+        <location filename="../transactionview.cpp" line="56"/>
+        <location filename="../transactionview.cpp" line="72"/>
         <source>All</source>
         <translation>Toutes</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="56"/>
+        <location filename="../transactionview.cpp" line="57"/>
         <source>Today</source>
         <translation>Aujourd&apos;hui</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="57"/>
+        <location filename="../transactionview.cpp" line="58"/>
         <source>This week</source>
         <translation>Cette semaine</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="58"/>
+        <location filename="../transactionview.cpp" line="59"/>
         <source>This month</source>
         <translation>Ce mois</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="59"/>
+        <location filename="../transactionview.cpp" line="60"/>
         <source>Last month</source>
         <translation>Mois dernier</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="60"/>
+        <location filename="../transactionview.cpp" line="61"/>
         <source>This year</source>
         <translation>Cette année</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="61"/>
+        <location filename="../transactionview.cpp" line="62"/>
         <source>Range...</source>
         <translation>Intervalle...</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="72"/>
+        <location filename="../transactionview.cpp" line="73"/>
         <source>Received with</source>
         <translation>Reçu avec</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="74"/>
+        <location filename="../transactionview.cpp" line="75"/>
         <source>Sent to</source>
         <translation>Envoyé à</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="76"/>
+        <location filename="../transactionview.cpp" line="77"/>
         <source>To yourself</source>
         <translation>À vous-même</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="77"/>
+        <location filename="../transactionview.cpp" line="78"/>
         <source>Mined</source>
         <translation>Extraction</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="78"/>
+        <location filename="../transactionview.cpp" line="79"/>
         <source>Mint by stake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="79"/>
+        <location filename="../transactionview.cpp" line="80"/>
         <source>Other</source>
         <translation>Autre</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="85"/>
+        <location filename="../transactionview.cpp" line="86"/>
         <source>Enter address or label to search</source>
         <translation>Entrez une adresse ou une étiquette à rechercher</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="91"/>
+        <location filename="../transactionview.cpp" line="92"/>
         <source>Min amount</source>
         <translation>Montant min</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="125"/>
+        <location filename="../transactionview.cpp" line="126"/>
         <source>Copy address</source>
         <translation>Copier l&apos;adresse</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="126"/>
+        <location filename="../transactionview.cpp" line="127"/>
         <source>Copy label</source>
         <translation>Copier l&apos;étiquette</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="127"/>
+        <location filename="../transactionview.cpp" line="128"/>
         <source>Copy amount</source>
         <translation>Copier le montant</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="128"/>
+        <location filename="../transactionview.cpp" line="129"/>
         <source>Edit label</source>
         <translation>Éditer l&apos;étiquette</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="129"/>
+        <location filename="../transactionview.cpp" line="130"/>
         <source>Show details...</source>
         <translation>Afficher les détails...</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="274"/>
+        <location filename="../transactionview.cpp" line="275"/>
         <source>Export Transaction Data</source>
         <translation>Exporter les données de transaction</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="275"/>
+        <location filename="../transactionview.cpp" line="276"/>
         <source>Comma separated file (*.csv)</source>
         <translation>Valeurs séparées par des virgules (*.csv)</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="283"/>
+        <location filename="../transactionview.cpp" line="284"/>
         <source>Confirmed</source>
         <translation>Confirmée</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="284"/>
+        <location filename="../transactionview.cpp" line="285"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="285"/>
+        <location filename="../transactionview.cpp" line="286"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="286"/>
+        <location filename="../transactionview.cpp" line="287"/>
         <source>Label</source>
         <translation>Étiquette</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="287"/>
+        <location filename="../transactionview.cpp" line="288"/>
         <source>Address</source>
         <translation>Adresse</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="288"/>
+        <location filename="../transactionview.cpp" line="289"/>
         <source>Amount</source>
         <translation>Montant</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="289"/>
+        <location filename="../transactionview.cpp" line="290"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="293"/>
+        <location filename="../transactionview.cpp" line="294"/>
         <source>Error exporting</source>
         <translation>Erreur lors de l&apos;exportation</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="293"/>
+        <location filename="../transactionview.cpp" line="294"/>
         <source>Could not write to file %1.</source>
         <translation>Impossible d&apos;écrire sur le fichier %1.</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="388"/>
+        <location filename="../transactionview.cpp" line="389"/>
         <source>Range:</source>
         <translation>Intervalle :</translation>
     </message>
     <message>
-        <location filename="../transactionview.cpp" line="396"/>
+        <location filename="../transactionview.cpp" line="397"/>
         <source>to</source>
         <translation>à</translation>
     </message>
@@ -1958,67 +1880,67 @@ Adresse : %4
 <context>
     <name>YbAddressBookPage</name>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="68"/>
+        <location filename="../ybaddressbookpage.cpp" line="71"/>
         <source>Copy address</source>
         <translation type="unfinished">Copier l&apos;adresse</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="69"/>
+        <location filename="../ybaddressbookpage.cpp" line="72"/>
         <source>Copy label</source>
         <translation type="unfinished">Copier l&apos;étiquette</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="70"/>
+        <location filename="../ybaddressbookpage.cpp" line="73"/>
         <source>Edit</source>
         <translation type="unfinished">Éditer</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="71"/>
+        <location filename="../ybaddressbookpage.cpp" line="74"/>
         <source>Delete</source>
         <translation type="unfinished">Effacer</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="187"/>
+        <location filename="../ybaddressbookpage.cpp" line="196"/>
         <source>Export Address Book Data</source>
         <translation type="unfinished">Exporter les données du carnet d&apos;adresses</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="188"/>
+        <location filename="../ybaddressbookpage.cpp" line="197"/>
         <source>Comma separated file (*.csv)</source>
         <translation type="unfinished">Valeurs séparées par des virgules (*.csv)</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="201"/>
+        <location filename="../ybaddressbookpage.cpp" line="210"/>
         <source>Error exporting</source>
         <translation type="unfinished">Erreur lors de l&apos;exportation</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="201"/>
+        <location filename="../ybaddressbookpage.cpp" line="210"/>
         <source>Could not write to file %1.</source>
         <translation type="unfinished">Impossible d&apos;écrire sur le fichier %1.</translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="214"/>
+        <location filename="../ybaddressbookpage.cpp" line="228"/>
         <source>新地址</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="215"/>
+        <location filename="../ybaddressbookpage.cpp" line="229"/>
         <source>复制</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="216"/>
+        <location filename="../ybaddressbookpage.cpp" line="230"/>
         <source>删除</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="217"/>
+        <location filename="../ybaddressbookpage.cpp" line="231"/>
         <source>二维码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybaddressbookpage.cpp" line="218"/>
+        <location filename="../ybaddressbookpage.cpp" line="232"/>
         <source>签名</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2034,125 +1956,125 @@ Adresse : %4
 <context>
     <name>YbEncryptionDialog</name>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="38"/>
+        <location filename="../ybencryptiondialog.cpp" line="39"/>
         <source>Encrypt wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="39"/>
+        <location filename="../ybencryptiondialog.cpp" line="40"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="44"/>
+        <location filename="../ybencryptiondialog.cpp" line="46"/>
         <source>Unlock wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="45"/>
+        <location filename="../ybencryptiondialog.cpp" line="47"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="52"/>
+        <location filename="../ybencryptiondialog.cpp" line="55"/>
         <source>Decrypt wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="53"/>
+        <location filename="../ybencryptiondialog.cpp" line="56"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="60"/>
+        <location filename="../ybencryptiondialog.cpp" line="64"/>
         <source>Change passphrase</source>
         <translation type="unfinished">Changer la phrase de passe</translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="61"/>
+        <location filename="../ybencryptiondialog.cpp" line="65"/>
         <source>Enter the old and new passphrase to the wallet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="124"/>
+        <location filename="../ybencryptiondialog.cpp" line="129"/>
         <source>Confirm wallet encryption</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="125"/>
+        <location filename="../ybencryptiondialog.cpp" line="130"/>
         <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ybcoin&lt;/b&gt;!
 Are you sure you wish to encrypt your wallet?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="134"/>
-        <location filename="../ybencryptiondialog.cpp" line="183"/>
+        <location filename="../ybencryptiondialog.cpp" line="139"/>
+        <location filename="../ybencryptiondialog.cpp" line="188"/>
         <source>Wallet encrypted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="135"/>
+        <location filename="../ybencryptiondialog.cpp" line="140"/>
         <source>ybcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ybcoin from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="140"/>
-        <location filename="../ybencryptiondialog.cpp" line="147"/>
-        <location filename="../ybencryptiondialog.cpp" line="189"/>
-        <location filename="../ybencryptiondialog.cpp" line="195"/>
+        <location filename="../ybencryptiondialog.cpp" line="145"/>
+        <location filename="../ybencryptiondialog.cpp" line="152"/>
+        <location filename="../ybencryptiondialog.cpp" line="194"/>
+        <location filename="../ybencryptiondialog.cpp" line="200"/>
         <source>Wallet encryption failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="141"/>
+        <location filename="../ybencryptiondialog.cpp" line="146"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="148"/>
-        <location filename="../ybencryptiondialog.cpp" line="196"/>
+        <location filename="../ybencryptiondialog.cpp" line="153"/>
+        <location filename="../ybencryptiondialog.cpp" line="201"/>
         <source>The supplied passphrases do not match.</source>
         <translation type="unfinished">Les phrases de passe entrées ne correspondent pas.</translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="159"/>
+        <location filename="../ybencryptiondialog.cpp" line="164"/>
         <source>Wallet unlock failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="160"/>
-        <location filename="../ybencryptiondialog.cpp" line="171"/>
-        <location filename="../ybencryptiondialog.cpp" line="190"/>
+        <location filename="../ybencryptiondialog.cpp" line="165"/>
+        <location filename="../ybencryptiondialog.cpp" line="176"/>
+        <location filename="../ybencryptiondialog.cpp" line="195"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="170"/>
+        <location filename="../ybencryptiondialog.cpp" line="175"/>
         <source>Wallet decryption failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="184"/>
+        <location filename="../ybencryptiondialog.cpp" line="189"/>
         <source>Wallet passphrase was succesfully changed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="225"/>
+        <location filename="../ybencryptiondialog.cpp" line="230"/>
         <source>加密钱包</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="235"/>
+        <location filename="../ybencryptiondialog.cpp" line="245"/>
         <source>输入口令：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="239"/>
+        <location filename="../ybencryptiondialog.cpp" line="249"/>
         <source>新口令：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybencryptiondialog.cpp" line="243"/>
+        <location filename="../ybencryptiondialog.cpp" line="253"/>
         <source>重复新口令：</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2234,264 +2156,264 @@ Are you sure you wish to encrypt your wallet?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="111"/>
+        <location filename="../ybmainwindow.cpp" line="112"/>
         <source>[testnet]</source>
         <translation type="unfinished">[testnet]</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="230"/>
+        <location filename="../ybmainwindow.cpp" line="231"/>
         <source>YBC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="299"/>
+        <location filename="../ybmainwindow.cpp" line="300"/>
         <source>Overview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="300"/>
+        <location filename="../ybmainwindow.cpp" line="301"/>
         <source>Show general overview of holdings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="305"/>
+        <location filename="../ybmainwindow.cpp" line="306"/>
         <source>Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="306"/>
+        <location filename="../ybmainwindow.cpp" line="307"/>
         <source>Browse transaction history</source>
         <translation type="unfinished">Permet de parcourir l&apos;historique des transactions</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="310"/>
+        <location filename="../ybmainwindow.cpp" line="311"/>
         <source>Address Book</source>
         <translation type="unfinished">Carnet d&apos;adresses</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="311"/>
+        <location filename="../ybmainwindow.cpp" line="312"/>
         <source>Edit the list of stored addresses and labels</source>
         <translation type="unfinished">Éditer la liste des adresses et des étiquettes stockées</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="315"/>
         <location filename="../ybmainwindow.cpp" line="316"/>
+        <location filename="../ybmainwindow.cpp" line="317"/>
         <source>Setting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="320"/>
         <location filename="../ybmainwindow.cpp" line="321"/>
+        <location filename="../ybmainwindow.cpp" line="322"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="324"/>
+        <location filename="../ybmainwindow.cpp" line="325"/>
         <source>Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="327"/>
+        <location filename="../ybmainwindow.cpp" line="328"/>
         <source>Receive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="330"/>
+        <location filename="../ybmainwindow.cpp" line="332"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="348"/>
+        <location filename="../ybmainwindow.cpp" line="350"/>
         <source>&amp;Receive shares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="349"/>
+        <location filename="../ybmainwindow.cpp" line="351"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation type="unfinished">Affiche la liste des adresses pour recevoir des paiements</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="353"/>
+        <location filename="../ybmainwindow.cpp" line="355"/>
         <source>&amp;Send shares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="354"/>
+        <location filename="../ybmainwindow.cpp" line="356"/>
         <source>Send shares to a ybcoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="358"/>
+        <location filename="../ybmainwindow.cpp" line="360"/>
         <source>Sign &amp;message</source>
         <translation type="unfinished">Signer un &amp;message</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="359"/>
+        <location filename="../ybmainwindow.cpp" line="361"/>
         <source>Prove you control an address</source>
         <translation type="unfinished">Prouver que vous contrôlez une adresse</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="371"/>
+        <location filename="../ybmainwindow.cpp" line="373"/>
         <source>E&amp;xit</source>
         <translation type="unfinished">Q&amp;uitter</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="372"/>
+        <location filename="../ybmainwindow.cpp" line="374"/>
         <source>Quit application</source>
         <translation type="unfinished">Quitter l&apos;application</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="375"/>
+        <location filename="../ybmainwindow.cpp" line="377"/>
         <source>&amp;About %1</source>
         <translation type="unfinished">&amp;À propos de %1</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="376"/>
+        <location filename="../ybmainwindow.cpp" line="378"/>
         <source>Show information about ybcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="378"/>
+        <location filename="../ybmainwindow.cpp" line="380"/>
         <source>About &amp;Qt</source>
         <translation type="unfinished">À propos de &amp;Qt</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="379"/>
+        <location filename="../ybmainwindow.cpp" line="381"/>
         <source>Show information about Qt</source>
         <translation type="unfinished">Afficher des informations sur Qt</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="381"/>
+        <location filename="../ybmainwindow.cpp" line="383"/>
         <source>&amp;Options...</source>
         <translation type="unfinished">&amp;Options...</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="382"/>
+        <location filename="../ybmainwindow.cpp" line="384"/>
         <source>Modify configuration options for ybcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="384"/>
+        <location filename="../ybmainwindow.cpp" line="386"/>
         <source>Show/Hide &amp;ybcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="385"/>
+        <location filename="../ybmainwindow.cpp" line="387"/>
         <source>Show or hide the ybcoin window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="386"/>
+        <location filename="../ybmainwindow.cpp" line="388"/>
         <source>&amp;Export...</source>
         <translation type="unfinished">&amp;Exporter...</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="387"/>
+        <location filename="../ybmainwindow.cpp" line="389"/>
         <source>Export the data in the current tab to a file</source>
         <translation type="unfinished">Exporter les données de l&apos;onglet courant vers un fichier</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="388"/>
+        <location filename="../ybmainwindow.cpp" line="390"/>
         <source>&amp;Encrypt Portfolio</source>
         <translation type="unfinished">&amp;Chiffrer le porte-monnaie</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="389"/>
+        <location filename="../ybmainwindow.cpp" line="391"/>
         <source>Encrypt or decrypt portfolio</source>
         <translation type="unfinished">Chiffrer ou décrypter le porte-monnaie</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="391"/>
+        <location filename="../ybmainwindow.cpp" line="393"/>
         <source>&amp;Unlock Wallet for Minting Only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="392"/>
+        <location filename="../ybmainwindow.cpp" line="394"/>
         <source>Unlock wallet only for minting. Sending coins will still require the passphrase.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="394"/>
+        <location filename="../ybmainwindow.cpp" line="396"/>
         <source>&amp;Backup Wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="395"/>
+        <location filename="../ybmainwindow.cpp" line="397"/>
         <source>Backup portfolio to another location</source>
         <translation type="unfinished">Sauvegarder le porte-monnaie à un autre emplacement</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="396"/>
+        <location filename="../ybmainwindow.cpp" line="398"/>
         <source>&amp;Change Passphrase</source>
         <translation type="unfinished">&amp;Modifier la phrase de passe</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="397"/>
+        <location filename="../ybmainwindow.cpp" line="399"/>
         <source>Change the passphrase used for portfolio encryption</source>
         <translation type="unfinished">Modifier la phrase de passe utilisée pour le cryptage du porte-monnaie</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="398"/>
+        <location filename="../ybmainwindow.cpp" line="400"/>
         <source>&amp;Debug window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="399"/>
+        <location filename="../ybmainwindow.cpp" line="401"/>
         <source>Open debugging and diagnostic console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="400"/>
+        <location filename="../ybmainwindow.cpp" line="402"/>
         <source>&amp;Export Bitcoin keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="401"/>
+        <location filename="../ybmainwindow.cpp" line="403"/>
         <source>Export the bitcoin keys associated with the ybcoin addresses to bitcoin via RPC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="402"/>
+        <location filename="../ybmainwindow.cpp" line="404"/>
         <source>&amp;Distribute dividends</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="403"/>
+        <location filename="../ybmainwindow.cpp" line="405"/>
         <source>Distribute dividends to share holders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="422"/>
+        <location filename="../ybmainwindow.cpp" line="430"/>
         <source>&amp;File</source>
         <translation type="unfinished">&amp;Fichier</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="431"/>
+        <location filename="../ybmainwindow.cpp" line="439"/>
         <source>S&amp;hares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="435"/>
+        <location filename="../ybmainwindow.cpp" line="443"/>
         <source>&amp;Settings</source>
         <translation type="unfinished">&amp;Réglages</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="442"/>
+        <location filename="../ybmainwindow.cpp" line="450"/>
         <source>&amp;Help</source>
         <translation type="unfinished">&amp;Aide</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="456"/>
+        <location filename="../ybmainwindow.cpp" line="464"/>
         <source>ybcoin client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="483"/>
+        <location filename="../ybmainwindow.cpp" line="491"/>
         <source>ybcoin-qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../ybmainwindow.cpp" line="534"/>
+        <location filename="../ybmainwindow.cpp" line="542"/>
         <source>%n active connection(s) to ybcoin network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -2499,12 +2421,12 @@ Are you sure you wish to encrypt your wallet?</source>
         </translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="558"/>
+        <location filename="../ybmainwindow.cpp" line="566"/>
         <source>Synchronizing with network...</source>
         <translation type="unfinished">Synchronisation avec le réseau...</translation>
     </message>
     <message numerus="yes">
-        <location filename="../ybmainwindow.cpp" line="560"/>
+        <location filename="../ybmainwindow.cpp" line="568"/>
         <source>~%n block(s) remaining</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -2512,17 +2434,17 @@ Are you sure you wish to encrypt your wallet?</source>
         </translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="571"/>
+        <location filename="../ybmainwindow.cpp" line="579"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="583"/>
+        <location filename="../ybmainwindow.cpp" line="591"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation type="unfinished">%1 blocs de l&apos;historique de transaction téléchargé.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../ybmainwindow.cpp" line="598"/>
+        <location filename="../ybmainwindow.cpp" line="606"/>
         <source>%n second(s) ago</source>
         <translation type="unfinished">
             <numerusform>il y a %n seconde</numerusform>
@@ -2530,7 +2452,7 @@ Are you sure you wish to encrypt your wallet?</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../ybmainwindow.cpp" line="602"/>
+        <location filename="../ybmainwindow.cpp" line="610"/>
         <source>%n minute(s) ago</source>
         <translation type="unfinished">
             <numerusform>il y a %n minute</numerusform>
@@ -2538,7 +2460,7 @@ Are you sure you wish to encrypt your wallet?</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../ybmainwindow.cpp" line="606"/>
+        <location filename="../ybmainwindow.cpp" line="614"/>
         <source>%n hour(s) ago</source>
         <translation type="unfinished">
             <numerusform>il y a %n heure</numerusform>
@@ -2546,7 +2468,7 @@ Are you sure you wish to encrypt your wallet?</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../ybmainwindow.cpp" line="610"/>
+        <location filename="../ybmainwindow.cpp" line="618"/>
         <source>%n day(s) ago</source>
         <translation type="unfinished">
             <numerusform>il y a %n jour</numerusform>
@@ -2554,57 +2476,57 @@ Are you sure you wish to encrypt your wallet?</source>
         </translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="616"/>
+        <location filename="../ybmainwindow.cpp" line="624"/>
         <source>Up to date</source>
         <translation type="unfinished">À jour</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="621"/>
+        <location filename="../ybmainwindow.cpp" line="629"/>
         <source>Catching up...</source>
         <translation type="unfinished">Rattrapage...</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="629"/>
+        <location filename="../ybmainwindow.cpp" line="637"/>
         <source>Last received block was generated %1.</source>
         <translation type="unfinished">Le dernier bloc reçu a été généré %1.</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="657"/>
+        <location filename="../ybmainwindow.cpp" line="665"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked for block minting only&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="657"/>
+        <location filename="../ybmainwindow.cpp" line="665"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="672"/>
+        <location filename="../ybmainwindow.cpp" line="680"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="701"/>
+        <location filename="../ybmainwindow.cpp" line="709"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="706"/>
+        <location filename="../ybmainwindow.cpp" line="714"/>
         <source>Sending...</source>
         <translation type="unfinished">Envoi en cours...</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="842"/>
+        <location filename="../ybmainwindow.cpp" line="851"/>
         <source>Sent transaction</source>
         <translation type="unfinished">Transaction envoyée</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="843"/>
+        <location filename="../ybmainwindow.cpp" line="852"/>
         <source>Incoming transaction</source>
         <translation type="unfinished">Transaction entrante</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="844"/>
+        <location filename="../ybmainwindow.cpp" line="853"/>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -2617,39 +2539,39 @@ Adresse : %4
 </translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="906"/>
+        <location filename="../ybmainwindow.cpp" line="915"/>
         <source>Backup Portfolio</source>
         <translation type="unfinished">Sauvegarder le porte-monnaie</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="906"/>
+        <location filename="../ybmainwindow.cpp" line="915"/>
         <source>Portfolio Data (*.dat)</source>
         <translation type="unfinished">Données de porte-monnaie (*.dat)</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="909"/>
+        <location filename="../ybmainwindow.cpp" line="918"/>
         <source>Backup Failed</source>
         <translation type="unfinished">La sauvegarde a échoué</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="909"/>
+        <location filename="../ybmainwindow.cpp" line="918"/>
         <source>There was an error trying to save the portfolio data to the new location.</source>
         <translation type="unfinished">Une erreur est survenue lors de l&apos;enregistrement des données de porte-monnaie à un autre emplacement.</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="940"/>
-        <location filename="../ybmainwindow.cpp" line="948"/>
+        <location filename="../ybmainwindow.cpp" line="949"/>
+        <location filename="../ybmainwindow.cpp" line="957"/>
         <source>Bitcoin keys export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="941"/>
+        <location filename="../ybmainwindow.cpp" line="950"/>
         <source>%1 key(s) were exported to Bitcoin.
 %2 key(s) were either already known or invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="949"/>
+        <location filename="../ybmainwindow.cpp" line="958"/>
         <source>Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2677,34 +2599,34 @@ Adresse : %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../yboverviewpage.cpp" line="219"/>
+        <location filename="../yboverviewpage.cpp" line="220"/>
         <source>Balance:</source>
         <translation type="unfinished">Solde :</translation>
     </message>
     <message>
-        <location filename="../yboverviewpage.cpp" line="220"/>
-        <location filename="../yboverviewpage.cpp" line="227"/>
-        <location filename="../yboverviewpage.cpp" line="234"/>
+        <location filename="../yboverviewpage.cpp" line="221"/>
+        <location filename="../yboverviewpage.cpp" line="228"/>
+        <location filename="../yboverviewpage.cpp" line="235"/>
         <source>0.00YBC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../yboverviewpage.cpp" line="226"/>
+        <location filename="../yboverviewpage.cpp" line="227"/>
         <source>Stake:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../yboverviewpage.cpp" line="233"/>
+        <location filename="../yboverviewpage.cpp" line="234"/>
         <source>Unconfirmed:</source>
         <translation type="unfinished">Non confirmé :</translation>
     </message>
     <message>
-        <location filename="../yboverviewpage.cpp" line="240"/>
+        <location filename="../yboverviewpage.cpp" line="241"/>
         <source>Number of transactions:</source>
         <translation type="unfinished">Nombre de transactions :</translation>
     </message>
     <message>
-        <location filename="../yboverviewpage.cpp" line="262"/>
+        <location filename="../yboverviewpage.cpp" line="263"/>
         <source>Recent transactions:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2754,55 +2676,69 @@ Adresse : %4
 <context>
     <name>YbSendSignDialog</name>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="79"/>
-        <location filename="../ybsendsigndialog.cpp" line="94"/>
-        <location filename="../ybsendsigndialog.cpp" line="106"/>
+        <location filename="../ybsendsigndialog.cpp" line="82"/>
+        <location filename="../ybsendsigndialog.cpp" line="97"/>
+        <location filename="../ybsendsigndialog.cpp" line="109"/>
         <source>Error signing</source>
         <translation type="unfinished">Une erreur est survenue lors de la signature</translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="79"/>
+        <location filename="../ybsendsigndialog.cpp" line="82"/>
         <source>%1 is not a valid address.</source>
         <translation type="unfinished">%1 n&apos;est pas une adresse valide.</translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="94"/>
+        <location filename="../ybsendsigndialog.cpp" line="97"/>
         <source>Private key for %1 is not available.</source>
         <translation type="unfinished">La clef privée pour %1 n&apos;est pas disponible.</translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="106"/>
+        <location filename="../ybsendsigndialog.cpp" line="109"/>
         <source>Sign failed</source>
         <translation type="unfinished">Échec de la signature</translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="127"/>
-        <source>您可以用您的地址对消息进行签名，以证明您是该地址的所有人，注意不要对模棱两可
-的消息签名，以免遭受钓鱼式的攻击。请确保消息真实明确的表达您的意愿。</source>
+        <location filename="../ybsendsigndialog.cpp" line="130"/>
+        <source>您可以用您的地址对消息进行签名，以证明您是该地址的所有人，注意不要对模棱两可的消息签名，以免遭受钓鱼式的攻击。请确保消息真实明确的表达您的意愿。</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="129"/>
+        <location filename="../ybsendsigndialog.cpp" line="132"/>
         <source>发送签名消息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="148"/>
+        <location filename="../ybsendsigndialog.cpp" line="137"/>
+        <source>从剪贴板粘贴地址</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ybsendsigndialog.cpp" line="142"/>
+        <source>从地址簿选择地址</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ybsendsigndialog.cpp" line="147"/>
+        <source>复制签名到剪贴板</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ybsendsigndialog.cpp" line="154"/>
         <source>点击&quot;消息签名&quot;获取签名</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="152"/>
+        <location filename="../ybsendsigndialog.cpp" line="158"/>
         <source>地址：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="164"/>
+        <location filename="../ybsendsigndialog.cpp" line="170"/>
         <source>标签：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsendsigndialog.cpp" line="174"/>
+        <location filename="../ybsendsigndialog.cpp" line="180"/>
         <source>地址签名：</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2826,16 +2762,16 @@ Adresse : %4
     </message>
     <message>
         <location filename="../ybsettingpage.cpp" line="24"/>
-        <location filename="../ybsettingpage.cpp" line="119"/>
+        <location filename="../ybsettingpage.cpp" line="120"/>
         <source>密码设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ybsettingpage.cpp" line="27"/>
         <location filename="../ybsettingpage.cpp" line="30"/>
-        <location filename="../ybsettingpage.cpp" line="123"/>
-        <location filename="../ybsettingpage.cpp" line="138"/>
-        <location filename="../ybsettingpage.cpp" line="153"/>
+        <location filename="../ybsettingpage.cpp" line="124"/>
+        <location filename="../ybsettingpage.cpp" line="139"/>
+        <location filename="../ybsettingpage.cpp" line="154"/>
         <source>已禁用</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2855,25 +2791,24 @@ Adresse : %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsettingpage.cpp" line="36"/>
-        <source>安全提示：确保您的信息正确并处于最新状态，以防止您的钱包遭受未经授权的访问，并在丢失钱包ID或密码的
-情况下帮助您恢复钱包的访问权限。</source>
+        <location filename="../ybsettingpage.cpp" line="37"/>
+        <source>安全提示：确保您的信息正确并处于最新状态，以防止您的钱包遭受未经授权的访问，并在丢失钱包ID或密码的情况下帮助您恢复钱包的访问权限。</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsettingpage.cpp" line="38"/>
-        <location filename="../ybsettingpage.cpp" line="40"/>
-        <location filename="../ybsettingpage.cpp" line="42"/>
+        <location filename="../ybsettingpage.cpp" line="39"/>
+        <location filename="../ybsettingpage.cpp" line="41"/>
+        <location filename="../ybsettingpage.cpp" line="43"/>
         <source>更改</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsettingpage.cpp" line="134"/>
+        <location filename="../ybsettingpage.cpp" line="135"/>
         <source>解锁锻造</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybsettingpage.cpp" line="149"/>
+        <location filename="../ybsettingpage.cpp" line="150"/>
         <source>口令设置</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2896,6 +2831,11 @@ Adresse : %4
     <message>
         <location filename="../ybtoolbarwidget.cpp" line="36"/>
         <source>My wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ybtoolbarwidget.cpp" line="42"/>
+        <source>0.00YBC</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
