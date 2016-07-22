@@ -1,9 +1,7 @@
 <RCC>
     <qresource prefix="/icons">
-        <file alias="peershares">res/icons/peershares.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
-        <file alias="toolbar">res/icons/toolbar.png</file>
         <file alias="connect_0">res/icons/connect0_16.png</file>
         <file alias="connect_1">res/icons/connect1_16.png</file>
         <file alias="connect_2">res/icons/connect2_16.png</file>
@@ -65,6 +63,8 @@
         <file alias="send">res/icons/send.png</file>
         <file alias="paste">res/icons/复制icon.png</file>
         <file alias="addr">res/icons/地址簿icon.png</file>
+        <file alias="peershares">res/icons/ybshares.png</file>
+        <file alias="toolbar">res/icons/toolbar.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

@@ -135,7 +135,7 @@ void YbSendCoinsDialog::createWidget()
     QString titleStr(tr("发送"));
     QString titleInfoStr(tr("立即向任意元宝币地址发送元宝币。"));
     title = new YbMessageDialogTitle(sendPix, titleStr, titleInfoStr, this);
-    this->setMinimumHeight(570);
+    this->setMinimumHeight(370);
     this->setMinimumWidth(550);
     setAutoFillBackground(true);
     QPalette pa = palette();
@@ -195,12 +195,12 @@ SendCoinsButtonBar::SendCoinsButtonBar(QWidget *parent) :
     labelLayout->addWidget(labelBalance);
 
     cancelButton = new YbPushButton(tr("取消"), 60, 30, false, this);
-    deleteButton = new YbPushButton(tr("删除全部"), 60, 30, false, this);
+    //deleteButton = new YbPushButton(tr("删除全部"), 60, 30, false, this);
     clearButton = new YbPushButton(tr("清空内容"), 60, 30, false, this);
     sendButton = new YbPushButton(tr("发送"), 60, 30, true, this);
 
     connect(cancelButton, SIGNAL(clicked()), this, SIGNAL(cancel()));
-    connect(deleteButton, SIGNAL(clicked()), this, SIGNAL(deleteAll()));
+    //connect(deleteButton, SIGNAL(clicked()), this, SIGNAL(deleteAll()));
     connect(clearButton, SIGNAL(clicked()), this, SIGNAL(clear()));
     connect(sendButton, SIGNAL(clicked()), this, SIGNAL(send()));
 
@@ -208,7 +208,7 @@ SendCoinsButtonBar::SendCoinsButtonBar(QWidget *parent) :
     mainLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     mainLayout->addLayout(labelLayout);
     mainLayout->addWidget(cancelButton);
-    mainLayout->addWidget(deleteButton);
+    //mainLayout->addWidget(deleteButton);
     mainLayout->addWidget(clearButton);
     mainLayout->addWidget(sendButton);
 

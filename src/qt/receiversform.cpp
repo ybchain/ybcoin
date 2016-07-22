@@ -466,6 +466,7 @@ Receiver *ReceiversForm::addReceiver()
     }else{
         receiver->setCloseButtonVisible(false);
     }
+    receiver->setAddButtonVisible(false);
 
     layout->addWidget(receiver);
     receiverList.append(receiver);
