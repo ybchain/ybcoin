@@ -738,6 +738,10 @@ void YbMainWindow::gotoOverviewPage()
 
 void YbMainWindow::gotoHistoryPage()
 {
+    if(overviewButton->isChecked()){
+        overviewButton->setChecked(false);
+        historyButton->setChecked(true);
+    }
     stackedWidget->setCurrentWidget(historyPage);
     exportPushButton->setEnabled(true);
     exportAction->setEnabled(true);

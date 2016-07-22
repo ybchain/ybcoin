@@ -39,6 +39,11 @@ void YbToolButton::setChecked(bool isChecked)
     }
 }
 
+bool YbToolButton::isChecked()
+{
+    return m_isCheckable;
+}
+
 void YbToolButton::setDefaultState()
 {
     setChecked(false);

@@ -12,6 +12,7 @@ class YbToolButton : public QWidget
 public:
     explicit YbToolButton(QPixmap pixmap, QPixmap checkedPixmap, QString text, QWidget *parent = 0, bool isCheckable = true);
     void setChecked(bool isChecked);
+    bool isChecked();
     void setDefaultState();
 
 signals:
