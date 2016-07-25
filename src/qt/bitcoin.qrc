@@ -68,8 +68,8 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="splash">res/images/peershares_splash.png</file>
         <file alias="qrcode">res/images/qrcode.png</file>
+        <file alias="splash">res/images/peershares_splash.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
