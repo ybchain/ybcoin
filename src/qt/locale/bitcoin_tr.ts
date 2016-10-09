@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="tr">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="tr">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1126,17 +1125,17 @@ Adres: %4
     <name>Receiver</name>
     <message>
         <location filename="../receiversform.cpp" line="38"/>
-        <location filename="../receiversform.cpp" line="191"/>
+        <location filename="../receiversform.cpp" line="189"/>
         <source>输入地址</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="211"/>
+        <location filename="../receiversform.cpp" line="209"/>
         <source>receiver:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="225"/>
+        <location filename="../receiversform.cpp" line="222"/>
         <source>money:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1149,69 +1148,69 @@ Adres: %4
         <translation type="unfinished">Form</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="386"/>
-        <location filename="../receiversform.cpp" line="388"/>
+        <location filename="../receiversform.cpp" line="382"/>
+        <location filename="../receiversform.cpp" line="384"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation type="unfinished">&lt;b&gt;%1&lt;/b&gt; şu adrese: %2 (%3)</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="394"/>
+        <location filename="../receiversform.cpp" line="390"/>
         <source>Confirm send shares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="395"/>
+        <location filename="../receiversform.cpp" line="391"/>
         <source>Are you sure you want to send %1?</source>
         <translation type="unfinished">%1 tutarını göndermek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="395"/>
+        <location filename="../receiversform.cpp" line="391"/>
         <source> and </source>
         <translation type="unfinished"> ve </translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="417"/>
-        <location filename="../receiversform.cpp" line="422"/>
-        <location filename="../receiversform.cpp" line="427"/>
-        <location filename="../receiversform.cpp" line="432"/>
-        <location filename="../receiversform.cpp" line="438"/>
-        <location filename="../receiversform.cpp" line="443"/>
-        <location filename="../receiversform.cpp" line="448"/>
+        <location filename="../receiversform.cpp" line="413"/>
+        <location filename="../receiversform.cpp" line="418"/>
+        <location filename="../receiversform.cpp" line="423"/>
+        <location filename="../receiversform.cpp" line="428"/>
+        <location filename="../receiversform.cpp" line="434"/>
+        <location filename="../receiversform.cpp" line="439"/>
+        <location filename="../receiversform.cpp" line="444"/>
         <source>Send Shares</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="418"/>
+        <location filename="../receiversform.cpp" line="414"/>
         <source>The recepient address is not valid, please recheck.</source>
         <translation type="unfinished">Alıcı adresi geçerli değildir, lütfen denetleyiniz.</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="423"/>
+        <location filename="../receiversform.cpp" line="419"/>
         <source>The amount to pay must be at least one cent (0.01).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="428"/>
+        <location filename="../receiversform.cpp" line="424"/>
         <source>Amount exceeds your balance</source>
         <translation type="unfinished">Tutar bakiyenizden yüksektir</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="433"/>
+        <location filename="../receiversform.cpp" line="429"/>
         <source>Total exceeds your balance when the %1 transaction fee is included</source>
         <translation type="unfinished">Toplam, %1 muamele ücreti ilâve edildiğinde bakiyenizi geçmektedir</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="439"/>
+        <location filename="../receiversform.cpp" line="435"/>
         <source>Duplicate address found, can only send to each address once in one send operation</source>
         <translation type="unfinished">Çift adres bulundu, belli bir gönderi sırasında her adrese sadece tek bir gönderide bulunulabilir</translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="444"/>
+        <location filename="../receiversform.cpp" line="440"/>
         <source>Error: Transaction creation failed  </source>
         <translation type="unfinished">Hata: Muamele oluşturması başarısız oldu  </translation>
     </message>
     <message>
-        <location filename="../receiversform.cpp" line="449"/>
+        <location filename="../receiversform.cpp" line="445"/>
         <source>Error: The transaction was rejected.  This might happen if some of the shares in your portfolio were already spent, such as if you used a copy of wallet.dat and shares were spent in the copy but not marked as spent here.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1231,11 +1230,6 @@ Adres: %4
     <message>
         <location filename="../ybsendcoinsdialog.cpp" line="197"/>
         <source>取消</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ybsendcoinsdialog.cpp" line="198"/>
-        <source>删除全部</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2380,8 +2374,12 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../ybmainwindow.cpp" line="450"/>
+        <source>&amp;About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&amp;Help</source>
-        <translation type="unfinished">&amp;Yardım</translation>
+        <translation type="obsolete">&amp;Yardım</translation>
     </message>
     <message>
         <location filename="../ybmainwindow.cpp" line="464"/>
@@ -2491,17 +2489,17 @@ Are you sure you wish to encrypt your wallet?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="851"/>
+        <location filename="../ybmainwindow.cpp" line="855"/>
         <source>Sent transaction</source>
         <translation type="unfinished">Muamele yollandı</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="852"/>
+        <location filename="../ybmainwindow.cpp" line="856"/>
         <source>Incoming transaction</source>
         <translation type="unfinished">Gelen muamele</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="853"/>
+        <location filename="../ybmainwindow.cpp" line="857"/>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -2514,39 +2512,39 @@ Adres: %4
 </translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="915"/>
+        <location filename="../ybmainwindow.cpp" line="919"/>
         <source>Backup Portfolio</source>
         <translation type="unfinished">Cüzdanı yedekle</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="915"/>
+        <location filename="../ybmainwindow.cpp" line="919"/>
         <source>Portfolio Data (*.dat)</source>
         <translation type="unfinished">Cüzdan verileri (*.dat)</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="918"/>
+        <location filename="../ybmainwindow.cpp" line="922"/>
         <source>Backup Failed</source>
         <translation type="unfinished">Yedekleme başarısız oldu</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="918"/>
+        <location filename="../ybmainwindow.cpp" line="922"/>
         <source>There was an error trying to save the portfolio data to the new location.</source>
         <translation type="unfinished">Cüzdan verilerinin başka bir konumda kaydedilmesi sırasında bir hata meydana geldi.</translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="949"/>
-        <location filename="../ybmainwindow.cpp" line="957"/>
+        <location filename="../ybmainwindow.cpp" line="953"/>
+        <location filename="../ybmainwindow.cpp" line="961"/>
         <source>Bitcoin keys export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="950"/>
+        <location filename="../ybmainwindow.cpp" line="954"/>
         <source>%1 key(s) were exported to Bitcoin.
 %2 key(s) were either already known or invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ybmainwindow.cpp" line="958"/>
+        <location filename="../ybmainwindow.cpp" line="962"/>
         <source>Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
