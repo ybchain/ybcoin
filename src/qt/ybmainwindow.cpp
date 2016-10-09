@@ -437,7 +437,7 @@ void YbMainWindow::createMenuBar()
     file->addAction(quitAction);
 
     QMenu *shares = appMenuBar->addMenu(tr("S&hares"));
-    shares->addAction(exportPeercoinKeysAction);
+    //shares->addAction(exportPeercoinKeysAction);
     shares->addAction(distributeDividendsAction);
 
     QMenu *settings = appMenuBar->addMenu(tr("&Settings"));
@@ -447,11 +447,11 @@ void YbMainWindow::createMenuBar()
 //    settings->addSeparator();
     settings->addAction(optionsAction);
 
-    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+    QMenu *about = appMenuBar->addMenu(tr("&About"));
 //    help->addAction(openRPCConsoleAction);
 //    help->addSeparator();
-    help->addAction(aboutAction);
-    help->addAction(aboutQtAction);
+    about->addAction(aboutAction);
+    about->addAction(aboutQtAction);
 }
 
 void YbMainWindow::createTrayIcon()
