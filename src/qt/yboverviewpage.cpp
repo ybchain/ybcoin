@@ -204,7 +204,7 @@ void YbOverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmed
     currentUnconfirmedBalance = unconfirmedBalance;
     balanceValue->setText(BitcoinUnits::formatWithUnit(unit, balance));
     stakeValue->setText(BitcoinUnits::formatWithUnit(unit, stake));
-    emit setToolBarBalance(BitcoinUnits::formatWithUnit(unit, stake));
+    emit setToolBarBalance(BitcoinUnits::formatWithUnit(unit, balance));
     unconfirmedValue->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance));
 }
 
@@ -283,7 +283,7 @@ void YbOverviewPage::displayUnitChanged()
     if(!model || !model->getOptionsModel())
         return;
     if(currentBalance != -1)
-        setBalance(currentBalance, currentStake, currentUnconfirmedBalance);
+        setBalance(currentBalance, model->getStake(), currentUnconfirmedBalance);
 
     txdelegate->unit = model->getOptionsModel()->getDisplayUnit();
     listTransactions->update();
