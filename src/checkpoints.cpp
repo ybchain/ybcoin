@@ -32,6 +32,7 @@ namespace Checkpoints
         ( 3000, uint256("0x000000d2c7e47b31291ef443a4ffdf899ca1b2a9bf68571221eb1cb5a4ce2f0c") )
         ( 10000, uint256("0x387c737d156da5d12e9719ba5974ffa82cc92fd0b4362ec75e806c5d27003dd9") )
         ( 100000, uint256("0xa17dba3013fa6eede33707840a1e888e70fc335bb73407bb4ee2c5e05e1dee6b"))
+        ( 913468, uint256("0xe4c688eb3d1c69cb42593bd542d2cc5be544beee5f965b6eb8000494f1465414"))
         ;
 
     // For developer only, read block id and stop here allways.
@@ -383,7 +384,7 @@ namespace Checkpoints
 }
 
 // Peershares: sync-checkpoint master key
-const std::string CSyncCheckpoint::strMasterPubKey = "04c0c707c28533fd5c9f79d2d3a2d80dff259ad8f915241cd14608fb9bc07c74830efe8438f2b272a866b4af5e0c2cc2a9909972aefbd976937e39f46bb38c277c";
+const std::string CSyncCheckpoint::strMasterPubKey = "14c0c707c28533fd5c9f79d2d3a2d80dff259ad8f915241cd14608fb9bc07c74830efe8438f2b272a866b4af5e0c2cc2a9909972aefbd976937e39f46bb38c277c";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";
 
