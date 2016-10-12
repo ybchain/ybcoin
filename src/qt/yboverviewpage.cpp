@@ -283,7 +283,7 @@ void YbOverviewPage::displayUnitChanged()
     if(!model || !model->getOptionsModel())
         return;
     if(currentBalance != -1)
-        setBalance(currentBalance, model->getStake(), currentUnconfirmedBalance);
+        setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance());
 
     txdelegate->unit = model->getOptionsModel()->getDisplayUnit();
     listTransactions->update();
