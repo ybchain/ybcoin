@@ -17,6 +17,7 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QScrollArea>
+#include <QDebug>
 
 YbSendCoinsDialog::YbSendCoinsDialog(QWidget *parent) :
     addAsLabel(new QValidatedLineEdit(this)), buttonBar(new SendCoinsButtonBar), QDialog(parent)

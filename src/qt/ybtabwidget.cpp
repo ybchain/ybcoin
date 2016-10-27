@@ -30,6 +30,9 @@ YbTabWidget::YbTabWidget(YbInformation *leftWidget, YbConsole *rightWidget, QWid
     tabButtonLayout->setSpacing(0);
     tabButtonLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     tabButtonLayout->addWidget(leftTabButton);
+#ifdef Q_OS_MAC
+    tabButtonLayout->addSpacing(10);
+#endif
     tabButtonLayout->addWidget(rightTabButton);
     tabButtonLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     QVBoxLayout *mainLayout = new QVBoxLayout;

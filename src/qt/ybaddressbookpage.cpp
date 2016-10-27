@@ -29,7 +29,7 @@ YbAddressBookPage::YbAddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
 {
     createWidget();
 
-#ifdef Q_WS_MAC // Icons on push buttons are very uncommon on Mac
+#ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     newAddressButton->setIcon(QIcon());
     copyAddressButton->setIcon(QIcon());
     deleteAddressButton->setIcon(QIcon());

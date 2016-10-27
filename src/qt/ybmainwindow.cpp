@@ -31,7 +31,7 @@
 #include "distributedivdialog.h"
 #include "ybencryptiondialog.h"
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
 #endif
 
@@ -111,7 +111,7 @@ void YbMainWindow::setClientModel(ClientModel *clientModel)
         {
             QString title_testnet = windowTitle() + QString(" ") + tr("[testnet]");
             setWindowTitle(title_testnet);
-#ifndef Q_WS_MAC
+#ifndef Q_OS_MAC
             setWindowIcon(QIcon(":icons/peershares_testnet"));
 #else
             MacDockIconHandler::instance()->setIcon(QIcon(":icons/peershares_testnet"));
@@ -169,7 +169,7 @@ void YbMainWindow::setWalletModel(WalletModel *walletModel)
 void YbMainWindow::changeEvent(QEvent *e)
 {
     QWidget::changeEvent(e);
-#ifndef Q_WS_MAC // Ignored on Mac
+#ifndef Q_OS_MAC // Ignored on Mac
     if(e->type() == QEvent::WindowStateChange)
     {
         if(clientModel && clientModel->getOptionsModel()->getMinimizeToTray())
@@ -189,7 +189,7 @@ void YbMainWindow::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
-#ifndef Q_WS_MAC // Ignored on Mac
+#ifndef Q_OS_MAC // Ignored on Mac
         if(!clientModel->getOptionsModel()->getMinimizeToTray() &&
            !clientModel->getOptionsModel()->getMinimizeOnClose())
         {
@@ -249,7 +249,9 @@ void YbMainWindow::createWidgets()
     stackedWidget = new YbStackedWidget(this);
     overviewPage = new YbOverviewPage(this);
     historyPage = new QWidget(this);
+#ifndef Q_OS_MAC
     historyPage->setStyleSheet("QLineEdit{border: 2px groove rgb(211, 211, 211)} QComboBox{border: 2px groove rgb(211, 211, 211);}");
+#endif
     QHBoxLayout *hbox = new QHBoxLayout();
     transactionView = new TransactionView(this);
     hbox->addSpacing(20);
@@ -347,13 +349,13 @@ void YbMainWindow::createButton()
 
 void YbMainWindow::createActions()
 {
-    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive shares"), this);
+    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive YBC"), this);
     receiveCoinsAction->setToolTip(tr("Show the list of addresses for receiving payments"));
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
 
-    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send shares"), this);
-    sendCoinsAction->setToolTip(tr("Send shares to a ybcoin address"));
+    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send YBC"), this);
+    sendCoinsAction->setToolTip(tr("Send YBC to a ybcoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
 
@@ -419,7 +421,7 @@ void YbMainWindow::createActions()
 
 void YbMainWindow::createMenuBar()
 {
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
     appMenuBar = new QMenuBar();
 #else
@@ -436,9 +438,9 @@ void YbMainWindow::createMenuBar()
     file->addSeparator();
     file->addAction(quitAction);
 
-    QMenu *shares = appMenuBar->addMenu(tr("S&hares"));
-    //shares->addAction(exportPeercoinKeysAction);
-    shares->addAction(distributeDividendsAction);
+//    QMenu *shares = appMenuBar->addMenu(tr("S&hares"));
+//    //shares->addAction(exportPeercoinKeysAction);
+//    shares->addAction(distributeDividendsAction);
 
     QMenu *settings = appMenuBar->addMenu(tr("&Settings"));
 //    settings->addAction(encryptWalletAction);
@@ -457,7 +459,7 @@ void YbMainWindow::createMenuBar()
 void YbMainWindow::createTrayIcon()
 {
     QMenu *trayIconMenu;
-#ifndef Q_WS_MAC
+#ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
@@ -483,7 +485,7 @@ void YbMainWindow::createTrayIcon()
     trayIconMenu->addAction(sendCoinsAction);
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(optionsAction);
-#ifndef Q_WS_MAC // This is built-in on Mac
+#ifndef Q_OS_MAC // This is built-in on Mac
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
 #endif
@@ -783,7 +785,7 @@ void YbMainWindow::gotoHelpPage()
 
 void YbMainWindow::showSendCoinsDialog()
 {
-    sendCoinsDialog->show();
+    sendCoinsDialog->exec();
 //    exportPushButton->setEnabled(false);
 //    disconnect(exportPushButton, SIGNAL(clicked()), 0, 0);
 }
@@ -819,7 +821,7 @@ void YbMainWindow::distributeDividendsClicked()
     dd.exec();
 }
 
-#ifndef Q_WS_MAC
+#ifndef Q_OS_MAC
 void YbMainWindow::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)

@@ -74,7 +74,7 @@ bool Receiver::validate()
     // Check input validity
     bool retval = true;
 
-    if(payAmount->validate())
+    if(!payAmount->validate())
     {
         retval = false;
     }
@@ -182,9 +182,11 @@ void Receiver::createWidget()
     setAutoFillBackground(true);
     QPalette pa = palette();
     pa.setColor(QPalette::Background,QColor(255, 255, 255));
-    this->setPalette(pa);
 
+    this->setPalette(pa);
+#ifndef Q_OS_MAC
     setStyleSheet("QLineEdit{border: 2px groove rgb(211, 211, 211)} QDoubleSpinBox{border: 2px groove rgb(211, 211, 211);} QComboBox{border: 2px groove rgb(211, 211, 211);}");
+#endif
 
     payTo->setToolTip(tr("输入地址"));
     payTo->setMinimumHeight(25);
@@ -373,7 +375,6 @@ void ReceiversForm::send()
     {
         return;
     }
-
     // Format confirmation message
     QStringList formatted;
     foreach(const SendCoinsRecipient &rcp, recipients)
@@ -384,7 +385,6 @@ void ReceiversForm::send()
         formatted.append(tr("<b>%1</b> to %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BTC, rcp.amount), rcp.label.toHtmlEscaped(), rcp.address));
 #endif
     }
-
     fNewRecipientAllowed = false;
 
     QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send shares"),
@@ -410,39 +410,39 @@ void ReceiversForm::send()
     switch(sendstatus.status)
     {
     case WalletModel::InvalidAddress:
-        QMessageBox::warning(this, tr("Send Shares"),
+        QMessageBox::warning(this, tr("Send YBC"),
             tr("The recepient address is not valid, please recheck."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::InvalidAmount:
-        QMessageBox::warning(this, tr("Send Shares"),
+        QMessageBox::warning(this, tr("Send YBC"),
             tr("The amount to pay must be at least one cent (0.01)."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::AmountExceedsBalance:
-        QMessageBox::warning(this, tr("Send Shares"),
+        QMessageBox::warning(this, tr("Send YBC"),
             tr("Amount exceeds your balance"),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::AmountWithFeeExceedsBalance:
-        QMessageBox::warning(this, tr("Send Shares"),
+        QMessageBox::warning(this, tr("Send YBC"),
             tr("Total exceeds your balance when the %1 transaction fee is included").
             arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BTC, sendstatus.fee)),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::DuplicateAddress:
-        QMessageBox::warning(this, tr("Send Shares"),
+        QMessageBox::warning(this, tr("Send YBC"),
             tr("Duplicate address found, can only send to each address once in one send operation"),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::TransactionCreationFailed:
-        QMessageBox::warning(this, tr("Send Shares"),
+        QMessageBox::warning(this, tr("Send YBC"),
             tr("Error: Transaction creation failed  "),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::TransactionCommitFailed:
-        QMessageBox::warning(this, tr("Send Shares"),
-            tr("Error: The transaction was rejected.  This might happen if some of the shares in your portfolio were already spent, such as if you used a copy of wallet.dat and shares were spent in the copy but not marked as spent here."),
+        QMessageBox::warning(this, tr("Send YBC"),
+            tr("Error: The transaction was rejected.  This might happen if some of the YBC in your portfolio were already spent, such as if you used a copy of wallet.dat and YBC were spent in the copy but not marked as spent here."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::Aborted: // User aborted, nothing to do
@@ -508,7 +508,7 @@ void ReceiversForm::createWidget()
     this->setPalette(pa);
     ui->setupUi(this);
     ui->widget->setPalette(pa);
-    ui->widget->setStyleSheet("QWidget{background-color: rgb(255, 255, 255)}");
+    ui->widget->setStyleSheet(".QWidget{background-color: rgb(255, 255, 255)}");
     layout = new QVBoxLayout;
     layout->setMargin(0);
     QVBoxLayout *mainLayout = new QVBoxLayout;

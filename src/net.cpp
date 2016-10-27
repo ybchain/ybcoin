@@ -1682,8 +1682,8 @@ void StartNode(void* parg)
 
     if(GetBoolArg("-genpos", false)){
         // peercoin: mint proof-of-stake blocks in the background
-//        if (!CreateThread(ThreadStakeMinter, pwalletMain))
-//            printf("Error: CreateThread(ThreadStakeMinter) failed\n");
+        if (!CreateThread(ThreadStakeMinter, pwalletMain))
+            printf("Error: CreateThread(ThreadStakeMinter) failed\n");
     }else{
         printf("Info: Proof-Of-Stake Generation Disabled\n");
     }

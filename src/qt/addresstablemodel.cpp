@@ -78,7 +78,7 @@ public:
 AddressTableModel::AddressTableModel(CWallet *wallet, WalletModel *parent) :
     QAbstractTableModel(parent),walletModel(parent),wallet(wallet),priv(0)
 {
-    columns << tr("Label") << tr("Address") << tr("Dividend address");
+    columns << tr("Label") << tr("Address")/* << tr("Dividend address")*/;
     priv = new AddressTablePriv(wallet);
     priv->refreshAddressTable();
 }

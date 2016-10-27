@@ -1,15 +1,12 @@
-QT += core gui network
-QT += widgets
 TEMPLATE = app
-TARGET = ybcoin-qt
+TARGET = ybcoin
 VERSION = 0.1.0.0
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
-CONFIG += thread
-CONFIG += static
-
-windows = true
+QT += core gui network
+QT += widgets
+QT += macextras
 
 # for boost 1.55, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
@@ -21,18 +18,18 @@ windows = true
 #    BOOST_LIB_PATH, BDB_INCLUDE_PATH, BDB_LIB_PATH
 #    OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
-BOOST_INCLUDE_PATH=C:\Boost\include\boost-1_55
-BOOST_LIB_PATH=C:\Boost\lib
-BDB_INCLUDE_PATH=D:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=D:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=D:/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=D:/deps/openssl-1.0.1g
+BOOST_INCLUDE_PATH=/opt/local/include/boost
+BOOST_LIB_PATH=/opt/local/lib
+BDB_INCLUDE_PATH=/opt/local/include/db48
+BDB_LIB_PATH=/opt/local/lib/db48
+OPENSSL_INCLUDE_PATH=/opt/local/include/openssl
+OPENSSL_LIB_PATH=/opt/local/lib
 
-MINIUPNPC_INCLUDE_PATH=D:/deps/miniupnpc-1.9
-MINIUPNPC_LIB_PATH=D:/deps/miniupnpc-1.9
+MINIUPNPC_INCLUDE_PATH=/opt/local/include/miniupnpc
+MINIUPNPC_LIB_PATH=/opt/local/lib
 
-QRENCODE_INCLUDE_PATH=D:/deps/qrencode-3.4.4
-QRENCODE_LIB_PATH=D:/deps/qrencode-3.4.4/.libs
+QRENCODE_INCLUDE_PATH=/opt/local/include
+QRENCODE_LIB_PATH=/opt/local/lib
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -101,20 +98,20 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
 }
 
 # regenerate src/build.h
-#!windows || contains(USE_BUILD_INFO, 1) {
-#    genbuild.depends = FORCE
-#    genbuild.commands = cd $$PWD; /bin/sh share/genbuild.sh $$OUT_PWD/build/build.h
-#    genbuild.target = genbuildhook
-#    PRE_TARGETDEPS += genbuildhook
-#    QMAKE_EXTRA_TARGETS += genbuild
-#    DEFINES += HAVE_BUILD_INFO
-#}
+!windows || contains(USE_BUILD_INFO, 1) {
+    genbuild.depends = FORCE
+    genbuild.commands = cd $$PWD; /bin/sh share/genbuild.sh $$OUT_PWD/build/build.h
+    genbuild.target = genbuildhook
+    PRE_TARGETDEPS += genbuildhook
+    QMAKE_EXTRA_TARGETS += genbuild
+    DEFINES += HAVE_BUILD_INFO
+}
 
 QMAKE_CXXFLAGS_WARN_ON = -Wall -Wextra -Wformat -Wformat-security -Wno-invalid-offsetof -Wno-sign-compare -Wno-unused-parameter
 # this option unrecognized when building on OSX 10.6.8
-#!macx {
-#    QMAKE_CXXFLAGS_WARN_ON += -fdiagnostics-show-option
-#}
+!macx {
+    QMAKE_CXXFLAGS_WARN_ON += -fdiagnostics-show-option
+}
 
 # Input
 DEPENDPATH += src src/json src/qt
@@ -409,9 +406,7 @@ windows:!contains(MINGW_THREAD_BUGFIX, 0) {
 }
 
 macx:HEADERS += src/qt/macdockiconhandler.h
-macx:HEADERS += src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
-macx:OBJECTIVE_SOURCES += src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/peershares.icns
@@ -420,7 +415,7 @@ macx:TARGET = "ybcoin"
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
 INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH
 LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
-LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX -lwsock32
+LIBS +=  -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 # -lgdi32 has to happen after -lcrypto (see  #681)
 windows:LIBS += -lole32 -luuid -lgdi32
 LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
