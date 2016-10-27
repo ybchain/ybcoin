@@ -8,6 +8,9 @@ QT += core gui network
 QT += widgets
 QT += macextras
 
+CONFIG += thread
+CONFIG += static
+
 # for boost 1.55, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
 # for boost thread win32 with _win32 sufix
@@ -35,6 +38,8 @@ OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
 
+QMAKE_CXXFLAGS += -static -static-libgcc -static-libstdc++
+QMAKE_CFLAGS += -static -static-libgcc -static-libstdc++
 
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
@@ -406,7 +411,9 @@ windows:!contains(MINGW_THREAD_BUGFIX, 0) {
 }
 
 macx:HEADERS += src/qt/macdockiconhandler.h
+macx:HEADERS += src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
+macx:OBJECTIVE_SOURCES += src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/peershares.icns
